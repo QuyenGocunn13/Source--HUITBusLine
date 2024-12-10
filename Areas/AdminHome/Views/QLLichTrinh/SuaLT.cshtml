@@ -1,0 +1,97 @@
+﻿@using QLBVXK.Models
+@model CHUYENXE
+
+@{
+    ViewBag.Title = "Sửa Lịch Trình";
+    Layout = "~/Areas/AdminHome/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <section class="content">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3 class="card-title">Thông tin lịch trình</h3>
+            </div>
+            <div class="card-body">
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success">
+                        <strong>Thành công!</strong> @TempData["SuccessMessage"]
+                    </div>
+                }
+
+                @if (TempData["ErrorMessages"] != null)
+                {
+                    <div class="alert alert-danger">
+                        <strong>Lỗi:</strong> @TempData["ErrorMessages"]
+                    </div>
+                }
+
+                @using (Html.BeginForm("SuaLT", "QLLichTrinh", FormMethod.Post))
+                {
+                    @Html.HiddenFor(m => m.MaChuyenXe) <!-- Giữ lại ID của lịch trình -->
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.MaTuyenXe, "Mã Tuyến Xe")
+                        @Html.DropDownListFor(m => m.MaTuyenXe, (SelectList)ViewBag.MaTuyenXeList, "Chọn mã tuyến xe", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.MaTuyenXe, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.MaXe, "Mã Xe")
+                        @Html.DropDownListFor(m => m.MaXe, (SelectList)ViewBag.MaXeList, "Chọn mã xe", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.MaXe, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.GiaTien, "Giá Tiền")
+                        @Html.TextBoxFor(m => m.GiaTien, new { @class = "form-control", placeholder = "Nhập giá tiền" })
+                        @Html.ValidationMessageFor(m => m.GiaTien, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.SoGheTrong, "Số Ghế Trống")
+                        @Html.TextBoxFor(m => m.SoGheTrong, new { @class = "form-control", placeholder = "Nhập số ghế trống" })
+                        @Html.ValidationMessageFor(m => m.SoGheTrong, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.GioKhoiHanh, "Giờ Khởi Hành")
+                        @Html.TextBoxFor(m => m.GioKhoiHanh, new { @class = "form-control", type = "time" })
+                        @Html.ValidationMessageFor(m => m.GioKhoiHanh, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.NgayKhoiHanh, "Ngày Khởi Hành")
+                        @Html.TextBoxFor(m => m.NgayKhoiHanh, new
+                        {
+                            @class = "form-control",
+                            type = "date",
+                            value = ViewBag.NgayKhoiHanh
+                        })
+                        @Html.ValidationMessageFor(m => m.NgayKhoiHanh, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.GioDenDuKien, "Giờ Đến Dự Kiến")
+                        @Html.TextBoxFor(m => m.GioDenDuKien, new { @class = "form-control", type = "time" })
+                        @Html.ValidationMessageFor(m => m.GioDenDuKien, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.NgayDenDuKien, "Ngày Đến Dự Kiến")
+                        @Html.TextBoxFor(m => m.NgayDenDuKien, new
+                        {
+                            @class = "form-control",
+                            type = "date",
+                            value = ViewBag.NgayDenDuKien 
+                        })
+                        @Html.ValidationMessageFor(m => m.NgayDenDuKien, "", new { @class = "text-danger" })
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Cập nhật</button>
+                }
+            </div>
+        </div>
+    </section>
+</div>

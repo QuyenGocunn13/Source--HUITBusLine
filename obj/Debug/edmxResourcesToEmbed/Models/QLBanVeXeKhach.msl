@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLBanVeXeKhachModelStoreContainer" CdmEntityContainer="QLBanVeXeKhachEntities">
+    <EntitySetMapping Name="CHUYENXEs">
+      <EntityTypeMapping TypeName="QLBanVeXeKhachModel.CHUYENXE">
+        <MappingFragment StoreEntitySet="CHUYENXE">
+          <ScalarProperty Name="MaChuyenXe" ColumnName="MaChuyenXe" />
+          <ScalarProperty Name="MaTuyenXe" ColumnName="MaTuyenXe" />
+          <ScalarProperty Name="MaXe" ColumnName="MaXe" />
+          <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+          <ScalarProperty Name="SoGheTrong" ColumnName="SoGheTrong" />
+          <ScalarProperty Name="GioKhoiHanh" ColumnName="GioKhoiHanh" />
+          <ScalarProperty Name="NgayKhoiHanh" ColumnName="NgayKhoiHanh" />
+          <ScalarProperty Name="GioDenDuKien" ColumnName="GioDenDuKien" />
+          <ScalarProperty Name="NgayDenDuKien" ColumnName="NgayDenDuKien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HANHKHACHes">
+      <EntityTypeMapping TypeName="QLBanVeXeKhachModel.HANHKHACH">
+        <MappingFragment StoreEntitySet="HANHKHACH">
+          <ScalarProperty Name="MaHanhKhach" ColumnName="MaHanhKhach" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="TenHanhKhach" ColumnName="TenHanhKhach" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOAIXEs">
+      <EntityTypeMapping TypeName="QLBanVeXeKhachModel.LOAIXE">
+        <MappingFragment StoreEntitySet="LOAIXE">
+          <ScalarProperty Name="MaLoaiXe" ColumnName="MaLoaiXe" />
+          <ScalarProperty Name="TenLoaiXe" ColumnName="TenLoaiXe" />
+          <ScalarProperty Name="SucChuaXe" ColumnName="SucChuaXe" />
+          <ScalarProperty Name="LoaiGhe" ColumnName="LoaiGhe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHANCONG_TAIXE_CHUYENXE">
+      <EntityTypeMapping TypeName="QLBanVeXeKhachModel.PHANCONG_TAIXE_CHUYENXE">
+        <MappingFragment StoreEntitySet="PHANCONG_TAIXE_CHUYENXE">
+          <ScalarProperty Name="MaTaiXe" ColumnName="MaTaiXe" />
+          <ScalarProperty Name="MaChuyenXe" ColumnName="MaChuyenXe" />
+          <ScalarProperty Name="PhuTrach" ColumnName="PhuTrach" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAIKHOANs">
+      <EntityTypeMapping TypeName="QLBanVeXeKhachModel.TAIKHOAN">
+        <MappingFragment StoreEntitySet="TAIKHOAN">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAIXEs">
+      <EntityTypeMapping TypeName="QLBanVeXeKhachModel.TAIXE">
+        <MappingFragment StoreEntitySet="TAIXE">
+          <ScalarProperty Name="MaTaiXe" ColumnName="MaTaiXe" />
+          <ScalarProperty Name="MaXe" ColumnName="MaXe" />
+          <ScalarProperty Name="TenTaiXe" ColumnName="TenTaiXe" />
+          <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+          <ScalarProperty Name="CCCD" ColumnName="CCCD" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TINHTHANHs">
+      <EntityTypeMapping TypeName="QLBanVeXeKhachModel.TINHTHANH">
+        <MappingFragment StoreEntitySet="TINHTHANH">
+          <ScalarProperty Name="MaTinhThanh" ColumnName="MaTinhThanh" />
+          <ScalarProperty Name="TenTinhThanh" ColumnName="TenTinhThanh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TUYENXEs">
+      <EntityTypeMapping TypeName="QLBanVeXeKhachModel.TUYENXE">
+        <MappingFragment StoreEntitySet="TUYENXE">
+          <ScalarProperty Name="MaTuyenXe" ColumnName="MaTuyenXe" />
+          <ScalarProperty Name="TenTuyenXe" ColumnName="TenTuyenXe" />
+          <ScalarProperty Name="DiemDi" ColumnName="DiemDi" />
+          <ScalarProperty Name="DiemDen" ColumnName="DiemDen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VEXEs">
+      <EntityTypeMapping TypeName="QLBanVeXeKhachModel.VEXE">
+        <MappingFragment StoreEntitySet="VEXE">
+          <ScalarProperty Name="MaVeXe" ColumnName="MaVeXe" />
+          <ScalarProperty Name="MaHanhKhach" ColumnName="MaHanhKhach" />
+          <ScalarProperty Name="MaChuyenXe" ColumnName="MaChuyenXe" />
+          <ScalarProperty Name="ViTriGhe" ColumnName="ViTriGhe" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="NgayXuat" ColumnName="NgayXuat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="XEs">
+      <EntityTypeMapping TypeName="QLBanVeXeKhachModel.XE">
+        <MappingFragment StoreEntitySet="XE">
+          <ScalarProperty Name="MaXe" ColumnName="MaXe" />
+          <ScalarProperty Name="BienSoXe" ColumnName="BienSoXe" />
+          <ScalarProperty Name="MaLoaiXe" ColumnName="MaLoaiXe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHITIETVEXEs">
+      <EntityTypeMapping TypeName="QLBanVeXeKhachModel.CHITIETVEXE">
+        <MappingFragment StoreEntitySet="CHITIETVEXE">
+          <ScalarProperty Name="MaVeXe" ColumnName="MaVeXe" />
+          <ScalarProperty Name="ViTriGhe" ColumnName="ViTriGhe" />
+          <ScalarProperty Name="DiemDon" ColumnName="DiemDon" />
+          <ScalarProperty Name="DiemTra" ColumnName="DiemTra" />
+          <ScalarProperty Name="NgayXuat" ColumnName="NgayXuat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="QLBanVeXeKhachModel.Store.fn_HienThiChiTietVe" FunctionImportName="fn_HienThiChiTietVe">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLBanVeXeKhachModel.fn_HienThiChiTietVe_Result">
+          <ScalarProperty Name="MaVeXe" ColumnName="MaVeXe" />
+          <ScalarProperty Name="ViTriGhe" ColumnName="ViTriGhe" />
+          <ScalarProperty Name="TenTuyenXe" ColumnName="TenTuyenXe" />
+          <ScalarProperty Name="DiemDi" ColumnName="DiemDi" />
+          <ScalarProperty Name="DiemDen" ColumnName="DiemDen" />
+          <ScalarProperty Name="NgayKhoiHanh" ColumnName="NgayKhoiHanh" />
+          <ScalarProperty Name="GioKhoiHanh" ColumnName="GioKhoiHanh" />
+          <ScalarProperty Name="NgayDenDuKien" ColumnName="NgayDenDuKien" />
+          <ScalarProperty Name="GioDenDuKien" ColumnName="GioDenDuKien" />
+          <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLBanVeXeKhachModel.Store.fn_HienThiChiTietVeLoc" FunctionImportName="fn_HienThiChiTietVeLoc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLBanVeXeKhachModel.fn_HienThiChiTietVeLoc_Result">
+          <ScalarProperty Name="MaVeXe" ColumnName="MaVeXe" />
+          <ScalarProperty Name="ViTriGhe" ColumnName="ViTriGhe" />
+          <ScalarProperty Name="TenTuyenXe" ColumnName="TenTuyenXe" />
+          <ScalarProperty Name="DiemDi" ColumnName="DiemDi" />
+          <ScalarProperty Name="DiemDen" ColumnName="DiemDen" />
+          <ScalarProperty Name="NgayKhoiHanh" ColumnName="NgayKhoiHanh" />
+          <ScalarProperty Name="GioKhoiHanh" ColumnName="GioKhoiHanh" />
+          <ScalarProperty Name="NgayDenDuKien" ColumnName="NgayDenDuKien" />
+          <ScalarProperty Name="GioDenDuKien" ColumnName="GioDenDuKien" />
+          <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLBanVeXeKhachModel.Store.fn_HienThiChuyenXe" FunctionImportName="fn_HienThiChuyenXe">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLBanVeXeKhachModel.fn_HienThiChuyenXe_Result">
+          <ScalarProperty Name="MaChuyenXe" ColumnName="MaChuyenXe" />
+          <ScalarProperty Name="TenTuyenXe" ColumnName="TenTuyenXe" />
+          <ScalarProperty Name="BienSoXe" ColumnName="BienSoXe" />
+          <ScalarProperty Name="NgayKhoiHanh" ColumnName="NgayKhoiHanh" />
+          <ScalarProperty Name="GioKhoiHanh" ColumnName="GioKhoiHanh" />
+          <ScalarProperty Name="GioDenDuKien" ColumnName="GioDenDuKien" />
+          <ScalarProperty Name="DiemDi" ColumnName="DiemDi" />
+          <ScalarProperty Name="DiemDen" ColumnName="DiemDen" />
+          <ScalarProperty Name="TenLoaiXe" ColumnName="TenLoaiXe" />
+          <ScalarProperty Name="SoGheTrong" ColumnName="SoGheTrong" />
+          <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLBanVeXeKhachModel.Store.fn_HienThiTatCaChuyenXe" FunctionImportName="fn_HienThiTatCaChuyenXe">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLBanVeXeKhachModel.fn_HienThiTatCaChuyenXe_Result">
+          <ScalarProperty Name="MaChuyenXe" ColumnName="MaChuyenXe" />
+          <ScalarProperty Name="TenTuyenXe" ColumnName="TenTuyenXe" />
+          <ScalarProperty Name="BienSoXe" ColumnName="BienSoXe" />
+          <ScalarProperty Name="NgayKhoiHanh" ColumnName="NgayKhoiHanh" />
+          <ScalarProperty Name="GioKhoiHanh" ColumnName="GioKhoiHanh" />
+          <ScalarProperty Name="GioDenDuKien" ColumnName="GioDenDuKien" />
+          <ScalarProperty Name="DiemDi" ColumnName="DiemDi" />
+          <ScalarProperty Name="DiemDen" ColumnName="DiemDen" />
+          <ScalarProperty Name="TenLoaiXe" ColumnName="TenLoaiXe" />
+          <ScalarProperty Name="SoGheTrong" ColumnName="SoGheTrong" />
+          <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLBanVeXeKhachModel.Store.KiemTraChuyenXe" FunctionImportName="KiemTraChuyenXe">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLBanVeXeKhachModel.KiemTraChuyenXe_Result">
+          <ScalarProperty Name="MaChuyenXe" ColumnName="MaChuyenXe" />
+          <ScalarProperty Name="MaXe" ColumnName="MaXe" />
+          <ScalarProperty Name="TenTaiXe" ColumnName="TenTaiXe" />
+          <ScalarProperty Name="DiemDi" ColumnName="DiemDi" />
+          <ScalarProperty Name="DiemDen" ColumnName="DiemDen" />
+          <ScalarProperty Name="NgayDi" ColumnName="NgayDi" />
+          <ScalarProperty Name="GioDi" ColumnName="GioDi" />
+          <ScalarProperty Name="NgayDenDuKien" ColumnName="NgayDenDuKien" />
+          <ScalarProperty Name="GioDenDuKien" ColumnName="GioDenDuKien" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLBanVeXeKhachModel.Store.KiemTraChuyenXeConTrong" FunctionImportName="KiemTraChuyenXeConTrong">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLBanVeXeKhachModel.KiemTraChuyenXeConTrong_Result">
+          <ScalarProperty Name="MaChuyenXe" ColumnName="MaChuyenXe" />
+          <ScalarProperty Name="TenTuyenXe" ColumnName="TenTuyenXe" />
+          <ScalarProperty Name="DiemDi" ColumnName="DiemDi" />
+          <ScalarProperty Name="DiemDen" ColumnName="DiemDen" />
+          <ScalarProperty Name="NgayDi" ColumnName="NgayDi" />
+          <ScalarProperty Name="GioDi" ColumnName="GioDi" />
+          <ScalarProperty Name="GiaVe" ColumnName="GiaVe" />
+          <ScalarProperty Name="SoGheTrong" ColumnName="SoGheTrong" />
+          <ScalarProperty Name="LoaiXe" ColumnName="LoaiXe" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLBanVeXeKhachModel.Store.LayChuyenXeCuoiCungCuaMoiXe" FunctionImportName="LayChuyenXeCuoiCungCuaMoiXe">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLBanVeXeKhachModel.LayChuyenXeCuoiCungCuaMoiXe_Result">
+          <ScalarProperty Name="MaXe" ColumnName="MaXe" />
+          <ScalarProperty Name="MaChuyenXe" ColumnName="MaChuyenXe" />
+          <ScalarProperty Name="MaTaiXe" ColumnName="MaTaiXe" />
+          <ScalarProperty Name="TenTaiXe" ColumnName="TenTaiXe" />
+          <ScalarProperty Name="DiemDi" ColumnName="DiemDi" />
+          <ScalarProperty Name="DiemDen" ColumnName="DiemDen" />
+          <ScalarProperty Name="NgayDi" ColumnName="NgayDi" />
+          <ScalarProperty Name="GioDi" ColumnName="GioDi" />
+          <ScalarProperty Name="NgayDenDuKien" ColumnName="NgayDenDuKien" />
+          <ScalarProperty Name="GioDenDuKien" ColumnName="GioDenDuKien" />
+          <ScalarProperty Name="GiaVe" ColumnName="GiaVe" />
+          <ScalarProperty Name="SoGheTrong" ColumnName="SoGheTrong" />
+          <ScalarProperty Name="LoaiXe" ColumnName="LoaiXe" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLBanVeXeKhachModel.Store.ThongKeDoanhThuTheoThang" FunctionImportName="ThongKeDoanhThuTheoThang">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLBanVeXeKhachModel.ThongKeDoanhThuTheoThang_Result">
+          <ScalarProperty Name="Thang" ColumnName="Thang" />
+          <ScalarProperty Name="Nam" ColumnName="Nam" />
+          <ScalarProperty Name="SoVeDaBan" ColumnName="SoVeDaBan" />
+          <ScalarProperty Name="TongDoanhThu" ColumnName="TongDoanhThu" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="HienThiThongTinGhe" FunctionName="QLBanVeXeKhachModel.Store.HienThiThongTinGhe" />
+    <FunctionImportMapping FunctionImportName="sp_CapNhatSoGheTrong" FunctionName="QLBanVeXeKhachModel.Store.sp_CapNhatSoGheTrong" />
+    <FunctionImportMapping FunctionImportName="sp_DatVe" FunctionName="QLBanVeXeKhachModel.Store.sp_DatVe">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLBanVeXeKhachModel.sp_DatVe_Result">
+          <ScalarProperty Name="MaVeXe" ColumnName="MaVeXe" />
+          <ScalarProperty Name="MaHanhKhach" ColumnName="MaHanhKhach" />
+          <ScalarProperty Name="MaChuyenXe" ColumnName="MaChuyenXe" />
+          <ScalarProperty Name="ViTriGhe" ColumnName="ViTriGhe" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="NgayXuat" ColumnName="NgayXuat" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_HienThiChuyenXe" FunctionName="QLBanVeXeKhachModel.Store.sp_HienThiChuyenXe">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLBanVeXeKhachModel.sp_HienThiChuyenXe_Result">
+          <ScalarProperty Name="MaChuyenXe" ColumnName="MaChuyenXe" />
+          <ScalarProperty Name="TenTuyenXe" ColumnName="TenTuyenXe" />
+          <ScalarProperty Name="BienSoXe" ColumnName="BienSoXe" />
+          <ScalarProperty Name="NgayKhoiHanh" ColumnName="NgayKhoiHanh" />
+          <ScalarProperty Name="GioKhoiHanh" ColumnName="GioKhoiHanh" />
+          <ScalarProperty Name="GioDenDuKien" ColumnName="GioDenDuKien" />
+          <ScalarProperty Name="DiemDi" ColumnName="DiemDi" />
+          <ScalarProperty Name="DiemDen" ColumnName="DiemDen" />
+          <ScalarProperty Name="TenLoaiXe" ColumnName="TenLoaiXe" />
+          <ScalarProperty Name="SoGheTrong" ColumnName="SoGheTrong" />
+          <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_InsertChuyenXe" FunctionName="QLBanVeXeKhachModel.Store.sp_InsertChuyenXe" />
+    <FunctionImportMapping FunctionImportName="sp_TaoTaiKhoan" FunctionName="QLBanVeXeKhachModel.Store.sp_TaoTaiKhoan" />
+    <FunctionImportMapping FunctionImportName="SP_ThemChuyenXe" FunctionName="QLBanVeXeKhachModel.Store.SP_ThemChuyenXe" />
+    <FunctionImportMapping FunctionImportName="sp_ThemHanhKhach" FunctionName="QLBanVeXeKhachModel.Store.sp_ThemHanhKhach" />
+    <FunctionImportMapping FunctionImportName="sp_ThongKeChuyenXeMuaNhieuNhatTheoThang" FunctionName="QLBanVeXeKhachModel.Store.sp_ThongKeChuyenXeMuaNhieuNhatTheoThang" />
+    <FunctionImportMapping FunctionImportName="sp_ThongKeDoanhThuTheoThang" FunctionName="QLBanVeXeKhachModel.Store.sp_ThongKeDoanhThuTheoThang">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLBanVeXeKhachModel.sp_ThongKeDoanhThuTheoThang_Result">
+          <ScalarProperty Name="Thang" ColumnName="Thang" />
+          <ScalarProperty Name="TongDoanhThuTheo_Thang" ColumnName="TongDoanhThuTheo_Thang" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ThongKeDoanhThuTong" FunctionName="QLBanVeXeKhachModel.Store.sp_ThongKeDoanhThuTong" />
+    <FunctionImportMapping FunctionImportName="sp_ThongKeTop5ChuyenXeTheoThang" FunctionName="QLBanVeXeKhachModel.Store.sp_ThongKeTop5ChuyenXeTheoThang" />
+    <FunctionImportMapping FunctionImportName="SP_TIMCHUYENXE" FunctionName="QLBanVeXeKhachModel.Store.SP_TIMCHUYENXE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLBanVeXeKhachModel.SP_TIMCHUYENXE_Result">
+          <ScalarProperty Name="MaChuyenXe" ColumnName="MaChuyenXe" />
+          <ScalarProperty Name="TenTuyenXe" ColumnName="TenTuyenXe" />
+          <ScalarProperty Name="DiemDi" ColumnName="DiemDi" />
+          <ScalarProperty Name="DiemDen" ColumnName="DiemDen" />
+          <ScalarProperty Name="NgayDi" ColumnName="NgayDi" />
+          <ScalarProperty Name="GioDi" ColumnName="GioDi" />
+          <ScalarProperty Name="NgayDen" ColumnName="NgayDen" />
+          <ScalarProperty Name="GioDen" ColumnName="GioDen" />
+          <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+          <ScalarProperty Name="SoGheTrong" ColumnName="SoGheTrong" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_TinhTongSoLuongVeTheoNam" FunctionName="QLBanVeXeKhachModel.Store.sp_TinhTongSoLuongVeTheoNam" />
+    <FunctionImportMapping FunctionImportName="SP_XemVeXe" FunctionName="QLBanVeXeKhachModel.Store.SP_XemVeXe">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLBanVeXeKhachModel.SP_XemVeXe_Result">
+          <ScalarProperty Name="MaVeXe" ColumnName="MaVeXe" />
+          <ScalarProperty Name="TenHanhKhach" ColumnName="TenHanhKhach" />
+          <ScalarProperty Name="DiemDi" ColumnName="DiemDi" />
+          <ScalarProperty Name="DiemDen" ColumnName="DiemDen" />
+          <ScalarProperty Name="GioKhoiHanh" ColumnName="GioKhoiHanh" />
+          <ScalarProperty Name="NgayKhoiHanh" ColumnName="NgayKhoiHanh" />
+          <ScalarProperty Name="GioDenDuKien" ColumnName="GioDenDuKien" />
+          <ScalarProperty Name="NgayDenDuKien" ColumnName="NgayDenDuKien" />
+          <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+          <ScalarProperty Name="SoGheTrong" ColumnName="SoGheTrong" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_XoaChuyenXe" FunctionName="QLBanVeXeKhachModel.Store.sp_XoaChuyenXe" />
+    <FunctionImportMapping FunctionImportName="sp_XoaHanhKhach" FunctionName="QLBanVeXeKhachModel.Store.sp_XoaHanhKhach" />
+    <FunctionImportMapping FunctionImportName="them_taixe" FunctionName="QLBanVeXeKhachModel.Store.them_taixe" />
+    <FunctionImportMapping FunctionImportName="XoaTaiKhoan" FunctionName="QLBanVeXeKhachModel.Store.XoaTaiKhoan" />
+    <FunctionImportMapping FunctionImportName="XoaTaiXeVaPhanCong" FunctionName="QLBanVeXeKhachModel.Store.XoaTaiXeVaPhanCong" />
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="QLBanVeXeKhachModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

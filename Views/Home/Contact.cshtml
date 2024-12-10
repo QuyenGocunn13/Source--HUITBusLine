@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Liên hệ";
+    Layout = "~/Views/Shared/_Layouthome.cshtml";
+}
+
+<!-- Contact Us Section -->
+<section class="contact-us">
+    <div class="container mx-auto">
+        <h1 class="header-title">LIÊN HỆ VỚI CHÚNG TÔI</h1>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2 class="info-title">Thông Tin Liên Hệ</h2>
+                <p class="info-description"><strong>Địa chỉ:</strong> 140 Lê Trọng Tấn, Tây Thạnh, Tân Phú, Thành phố Hồ Chí Minh</p>
+                <p class="info-description"><strong>Website:</strong> <a href="https://futabus.vn/" target="_blank">futabus.vn</a></p>
+                <p class="info-description"><strong>Điện thoại:</strong> 02838386852</p>
+                <p class="info-description"><strong>Fax:</strong> 02838386853</p>
+                <p class="info-description"><strong>Email:</strong> <a href="mailto:hotro@futa.vn">hotro@futa.vn</a></p>
+                <p class="info-description"><strong>Hotline:</strong> 19006067</p>
+            </div>
+            <div class="contact-form">
+                <h2 class="form-title">Gửi Tin Nhắn Cho Chúng Tôi</h2>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Họ và tên" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Nội dung tin nhắn" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Gửi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

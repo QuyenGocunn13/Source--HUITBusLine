@@ -1,0 +1,249 @@
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\QLBVXK.dll.config
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\QLBVXK.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\QLBVXK.pdb
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\csc.exe
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\csc.exe.config
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\csc.rsp
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\csi.exe
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\csi.exe.config
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\csi.rsp
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\Microsoft.Managed.Core.targets
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.AppContext.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.Collections.Immutable.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.Console.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.Globalization.Calendars.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.IO.Compression.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.IO.FileSystem.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.Net.Http.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.Net.Sockets.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.Reflection.Metadata.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.ValueTuple.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.Xml.XmlDocument.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.Xml.XPath.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\vbc.exe
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\vbc.exe.config
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\vbc.rsp
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\VBCSCompiler.exe
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\roslyn\VBCSCompiler.exe.config
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\Antlr3.Runtime.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\Microsoft.Web.Infrastructure.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\Newtonsoft.Json.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\System.Web.Helpers.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\System.Web.Mvc.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\System.Web.Optimization.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\System.Web.Razor.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\System.Web.WebPages.Deployment.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\System.Web.WebPages.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\System.Web.WebPages.Razor.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\WebGrease.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\System.Web.Helpers.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\System.Web.Mvc.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\System.Web.Optimization.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\System.Web.Razor.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\System.Web.WebPages.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\System.Web.WebPages.Deployment.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\System.Web.WebPages.Razor.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\Newtonsoft.Json.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\Antlr3.Runtime.pdb
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\obj\Debug\QLBVXK.csproj.AssemblyReference.cache
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\obj\Debug\QLBVXK.csproj.CoreCompileInputs.cache
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\obj\Debug\QLBVXK.csproj.Up2Date
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\obj\Debug\QLBVXK.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\obj\Debug\QLBVXK.pdb
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\EntityFramework.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\EntityFramework.SqlServer.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\EntityFramework.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\QLBVXK\bin\EntityFramework.SqlServer.xml
+D:\HQTCSDL\Source-HUITBusLine\obj\Debug\QLBVXK.csproj.AssemblyReference.cache
+D:\HQTCSDL\Source-HUITBusLine\obj\Debug\QLBVXK.csproj.CoreCompileInputs.cache
+D:\HQTCSDL\Source-HUITBusLine\obj\Debug\QLBVXK.dll
+D:\HQTCSDL\Source-HUITBusLine\obj\Debug\QLBVXK.pdb
+D:\HQTCSDL\Source-HUITBusLine\bin\QLBVXK.dll.config
+D:\HQTCSDL\Source-HUITBusLine\bin\QLBVXK.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\QLBVXK.pdb
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\csc.exe
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\csc.exe.config
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\csc.rsp
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\csi.exe
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\csi.exe.config
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\csi.rsp
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\Microsoft.Managed.Core.targets
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.AppContext.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.Collections.Immutable.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.Console.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.Globalization.Calendars.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.IO.Compression.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.IO.FileSystem.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.Net.Http.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.Net.Sockets.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.Reflection.Metadata.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.ValueTuple.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.Xml.XmlDocument.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.Xml.XPath.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\vbc.exe
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\vbc.exe.config
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\vbc.rsp
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\VBCSCompiler.exe
+D:\HQTCSDL\Source-HUITBusLine\bin\roslyn\VBCSCompiler.exe.config
+D:\HQTCSDL\Source-HUITBusLine\bin\Antlr3.Runtime.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\EntityFramework.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\EntityFramework.SqlServer.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\Microsoft.Web.Infrastructure.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\Newtonsoft.Json.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\System.Web.Helpers.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\System.Web.Mvc.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\System.Web.Optimization.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\System.Web.Razor.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\System.Web.WebPages.Deployment.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\System.Web.WebPages.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\System.Web.WebPages.Razor.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\WebGrease.dll
+D:\HQTCSDL\Source-HUITBusLine\bin\EntityFramework.xml
+D:\HQTCSDL\Source-HUITBusLine\bin\EntityFramework.SqlServer.xml
+D:\HQTCSDL\Source-HUITBusLine\bin\System.Web.Helpers.xml
+D:\HQTCSDL\Source-HUITBusLine\bin\System.Web.Mvc.xml
+D:\HQTCSDL\Source-HUITBusLine\bin\System.Web.Optimization.xml
+D:\HQTCSDL\Source-HUITBusLine\bin\System.Web.Razor.xml
+D:\HQTCSDL\Source-HUITBusLine\bin\System.Web.WebPages.xml
+D:\HQTCSDL\Source-HUITBusLine\bin\System.Web.WebPages.Deployment.xml
+D:\HQTCSDL\Source-HUITBusLine\bin\System.Web.WebPages.Razor.xml
+D:\HQTCSDL\Source-HUITBusLine\bin\Newtonsoft.Json.xml
+D:\HQTCSDL\Source-HUITBusLine\bin\Antlr3.Runtime.pdb
+D:\HQTCSDL\Source-HUITBusLine\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\HQTCSDL\Source-HUITBusLine\obj\Debug\QLBVXK.csproj.Up2Date
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\obj\Debug\QLBVXK.csproj.AssemblyReference.cache
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\obj\Debug\QLBVXK.csproj.CoreCompileInputs.cache
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\obj\Debug\QLBVXK.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\obj\Debug\QLBVXK.pdb
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\QLBVXK.dll.config
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\QLBVXK.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\QLBVXK.pdb
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\csc.exe
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\csc.exe.config
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\csc.rsp
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\csi.exe
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\csi.exe.config
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\csi.rsp
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\Microsoft.Managed.Core.targets
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.AppContext.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.Collections.Immutable.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.Console.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.Globalization.Calendars.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.IO.Compression.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.IO.FileSystem.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.Net.Http.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.Net.Sockets.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.Reflection.Metadata.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.ValueTuple.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.Xml.XmlDocument.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.Xml.XPath.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\vbc.exe
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\vbc.exe.config
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\vbc.rsp
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\VBCSCompiler.exe
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\roslyn\VBCSCompiler.exe.config
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\Antlr3.Runtime.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\EntityFramework.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\EntityFramework.SqlServer.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\Microsoft.Web.Infrastructure.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\Newtonsoft.Json.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\System.Web.Helpers.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\System.Web.Mvc.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\System.Web.Optimization.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\System.Web.Razor.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\System.Web.WebPages.Deployment.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\System.Web.WebPages.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\System.Web.WebPages.Razor.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\WebGrease.dll
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\EntityFramework.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\EntityFramework.SqlServer.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\System.Web.Helpers.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\System.Web.Mvc.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\System.Web.Optimization.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\System.Web.Razor.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\System.Web.WebPages.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\System.Web.WebPages.Deployment.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\System.Web.WebPages.Razor.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\Newtonsoft.Json.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\Antlr3.Runtime.pdb
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\QQ\ĐẠI HỌC\QTri_HCSDL\Đồ án - Bán vé xe khách\Source-HUITBusLine\obj\Debug\QLBVXK.csproj.Up2Date

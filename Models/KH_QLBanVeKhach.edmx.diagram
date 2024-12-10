@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0d1132b2501d4e309d16c7bd37cd5c92" Name="Diagram1">
+        <EntityTypeShape EntityType="QLBanVeXeKhachModel1.CHUYENXE" Width="1.5" PointX="5.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBanVeXeKhachModel1.HANHKHACH" Width="1.5" PointX="8.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBanVeXeKhachModel1.LOAIXE" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBanVeXeKhachModel1.PHANCONG_TAIXE_CHUYENXE" Width="1.5" PointX="7.5" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBanVeXeKhachModel1.TAIKHOAN" Width="1.5" PointX="6" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBanVeXeKhachModel1.TAIXE" Width="1.5" PointX="5.25" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBanVeXeKhachModel1.TINHTHANH" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBanVeXeKhachModel1.TUYENXE" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBanVeXeKhachModel1.VEXE" Width="1.5" PointX="10.5" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBanVeXeKhachModel1.XE" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBanVeXeKhachModel1.CHITIETVEXE" Width="1.5" PointX="12.75" PointY="2.75" IsExpanded="true" />
+        <AssociationConnector Association="QLBanVeXeKhachModel1.FK_CHUYENXE_TUYENXE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBanVeXeKhachModel1.FK_CHUYENXE_XE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBanVeXeKhachModel1.FK_PHANCONG_CHUYENXE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBanVeXeKhachModel1.FK_VEXE_CHUYENXE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBanVeXeKhachModel1.FK_HANHKHACH_TAIKHOAN" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBanVeXeKhachModel1.FK_VEXE_HANHKHACH" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBanVeXeKhachModel1.FK_XE_LOAIXE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBanVeXeKhachModel1.FK_TAIXE_XE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBanVeXeKhachModel1.FK_DIEMDEN_TINHTHANH" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBanVeXeKhachModel1.FK_DIEMDI_TINHTHANH" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBanVeXeKhachModel1.FK_CHITIETVEXE_VEXE" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

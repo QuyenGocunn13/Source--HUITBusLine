@@ -1,0 +1,138 @@
+﻿@using QLBVXK.Models
+@model List<VEXE>
+
+@{
+    ViewBag.Title = "Danh sách vé xe";
+    Layout = "~/Areas/AdminHome/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Quản Lý Vé Xe</h3>
+            <div class="card-tools">
+                @Html.ActionLink("Thêm mới", "ThemVX", "VeXe", null, new { @class = "btn btn-success" })
+            </div>
+        </div>
+
+        <div class="card-body">
+            <!-- Hiển thị thông báo thành công hoặc lỗi -->
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success">
+                    @TempData["SuccessMessage"]
+                </div>
+            }
+            @if (TempData["ErrorMessages"] != null)
+            {
+                <div class="alert alert-danger">
+                    @TempData["ErrorMessages"]
+                </div>
+            }
+
+            @if (Model != null && Model.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>STT</th>
+                                <th>ID</th>
+                                <th>Hành Khách</th>
+                                <th>Chuyến Xe</th>
+                                <th>Vị Trí Ghế</th>
+                                <th>Trạng Thái</th>
+                                <th>Ngày Xuất</th>
+                                <th class="text-center">Tác vụ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.Count; i++)
+                            {
+                                var item = Model[i];
+                                <tr id="trow@item.MaVeXe">
+                                    <td>@(i + 1)</td>
+                                    <td>@item.MaVeXe</td>
+                                    <td>@item.MaHanhKhach</td>
+                                    <td>@item.MaChuyenXe</td>
+                                    <td>@item.ViTriGhe</td>
+                                    <td>@item.TrangThai</td>
+                                    <td>
+                                        @if (item.NgayXuat.HasValue)
+                                        {
+                                            @item.NgayXuat.Value.ToString("dd/MM/yyyy")
+                                        }
+                                        else
+                                        {
+                                            @:N/A
+                                        }
+                                    </td>
+                                    <td class="text-center">
+                                        <!-- Chi tiết -->
+                                        <a href="@Url.Action("Details", "VeXe", new { id = item.MaVeXe.Trim() })" class="btn btn-warning btn-sm btn-action">
+                                            <i class="fas fa-eye"></i> 
+                                        </a>
+
+                                        <!-- Hủy -->
+                                        <a href="@Url.Action("HuyVe", "VeXe", new { id = item.MaVeXe.Trim() })" class="btn btn-danger btn-sm btn-action" onclick="return confirm('Bạn có chắc chắn muốn hủy vé?');">
+                                            <i class="fas fa-ban"></i> 
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Phân trang -->
+                <div class="pagination">
+                    @if (ViewBag.CurrentPage > 1)
+                    {
+                        <a href="@Url.Action("DSVeXe", new { page = ViewBag.CurrentPage - 1, pageSize = ViewBag.PageSize })">&laquo; Trước</a>
+                    }
+
+                    @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                    {
+                        <a href="@Url.Action("DSVeXe", new { page = i, pageSize = ViewBag.PageSize })" class="@(i == ViewBag.CurrentPage ? "active" : "")">@i</a>
+                    }
+
+                    @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+                    {
+                        <a href="@Url.Action("DSVeXe", new { page = ViewBag.CurrentPage + 1, pageSize = ViewBag.PageSize })">Sau &raquo;</a>
+                    }
+                </div>
+            }
+            else
+            {
+                <p>Không có tài xế nào.</p>
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Hiệu ứng hover cho các hộp chọn và input */
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+        .pagination a {
+            padding: 8px 16px;
+            margin: 0 4px;
+            text-decoration: none;
+            color: #007bff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+            .pagination a.active {
+                background-color: #f39c12;
+                color: white;
+            }
+
+            .pagination a:hover {
+                background-color: #ddd;
+            }
+</style>

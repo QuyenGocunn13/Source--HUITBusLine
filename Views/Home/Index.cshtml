@@ -1,0 +1,276 @@
+﻿@{
+    ViewData["Title"] = "Trang Chủ - My Website";
+    Layout = "~/Views/Shared/_Layouthome.cshtml";
+}
+
+<!-- Banner chạy chữ -->
+<div class="marquee">
+    <p>
+        🚌 Đặt vé xe khách nhanh chóng, dễ dàng! 🚌 |
+        🌟 Đem đến trải nghiệm tuyệt vời với giá cả hợp lý! 🌟
+        🚌 Đặt vé xe khách nhanh chóng, dễ dàng! 🚌 |
+        🌟 Đem đến trải nghiệm tuyệt vời với giá cả hợp lý! 🌟
+    </p>
+</div>
+
+<!-- Image Slider Section -->
+<section class="image-slider">
+    <h2 class="slider-title">KHUYẾN MÃI NỔI BẬT</h2>
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img src="https://cdn.futabus.vn/futa-busline-web-cms-prod/343_x_184_px_0b1588190d/343_x_184_px_0b1588190d.png" alt="Image 1">
+            <img src="https://cdn.futabus.vn/futa-busline-cms-dev/343x184_4x_29d182ce55/343x184_4x_29d182ce55.png" alt="Image 2">
+            <img src="https://cdn.futabus.vn/futa-busline-web-cms-prod/Zalo_11b66ecb81/Zalo_11b66ecb81.png" alt="Image 3">
+        </div>
+        <div class="mySlides">
+            <img src="https://cdn.futabus.vn/futa-busline-cms-dev/Banner_FUTA_Pay_2_57b0471834/Banner_FUTA_Pay_2_57b0471834.png" alt="Image 4">
+            <img src="https://cdn.futabus.vn/futa-busline-web-cms-prod/MO_CHUC_NANG_BAN_VE_BC_BO_BAO_TAN_THANG_TP_and_NG_ANH_THU_Q_12_02_3b47cb7f20/MO_CHUC_NANG_BAN_VE_BC_BO_BAO_TAN_THANG_TP_and_NG_ANH_THU_Q_12_02_3b47cb7f20.png" alt="Image 5">
+            <img src="https://cdn.futabus.vn/futa-busline-web-cms-prod/NANG_CAP_DONG_XE_TUYEN_BX_MIEN_TAY_BX_NGA_NAM_02_ffb1011ae5/NANG_CAP_DONG_XE_TUYEN_BX_MIEN_TAY_BX_NGA_NAM_02_ffb1011ae5.png" alt="Image 6">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+    <!-- Nút Đặt vé ngay dưới slider -->
+    <div class="slider-button-container">
+        <a href="@Url.Action("LichTrinh", "Home")" class="slider-button">Đặt vé ngay</a>
+    </div>
+</section>
+
+<!-- Tuyến Phổ Biến Section -->
+<section class="popular-routes">
+    <div class="max-w-7xl mx-auto py-10">
+        <h1 class="text-center text-green-800 text-3xl font-bold mb-2">
+            TUYẾN PHỔ BIẾN
+        </h1>
+        <p class="text-center text-gray-600 mb-8">
+            Được khách hàng tin tưởng và lựa chọn
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img alt="Image of Ho Chi Minh City" class="w-full h-48 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/3cMsMEUgIbqGFRjRrof56jqmLeJal46vDklG22Fu6jeKIZonA.jpg" width="600" />
+                <div class="p-4">
+                    <h2 class="text-lg font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                        Tuyến xe từ
+                        <br />
+                        TP Hồ Chí Minh
+                    </h2>
+                    <div class="mt-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-green-800 font-bold">
+                                Đà Lạt
+                            </span>
+                            <span class="text-gray-800">
+                                290.000đ
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            305km - 8 giờ - 24/11/2024
+                        </p>
+                    </div>
+                    <div class="mt-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-green-800 font-bold">
+                                Cần Thơ
+                            </span>
+                            <span class="text-gray-800">
+                                165.000đ
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            166km - 3 giờ 12 phút - 24/11/2024
+                        </p>
+                    </div>
+                    <div class="mt-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-green-800 font-bold">
+                                Long Xuyên
+                            </span>
+                            <span class="text-gray-800">
+                                190.000đ
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            203km - 5 giờ - 24/11/2024
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img alt="Image of Da Lat" class="w-full h-48 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/rzQE8iVVTJJvJNTRY5N1C3LuutzHqSJ9w1WSgi8n562BJD9E.jpg" width="600" />
+                <div class="p-4">
+                    <h2 class="text-lg font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                        Tuyến xe từ
+                        <br />
+                        Đà Lạt
+                    </h2>
+                    <div class="mt-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-green-800 font-bold">
+                                TP. Hồ Chí Minh
+                            </span>
+                            <span class="text-gray-800">
+                                290.000đ
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            310km - 8 giờ - 24/11/2024
+                        </p>
+                    </div>
+                    <div class="mt-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-green-800 font-bold">
+                                Đà Nẵng
+                            </span>
+                            <span class="text-gray-800">
+                                410.000đ
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            757km - 17 giờ - 24/11/2024
+                        </p>
+                    </div>
+                    <div class="mt-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-green-800 font-bold">
+                                Cần Thơ
+                            </span>
+                            <span class="text-gray-800">
+                                435.000đ
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            364km - 10 giờ - 24/11/2024
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img alt="Image of Can Tho" class="w-full h-48 object-cover" height="400" src="https://ik.imagekit.io/tvlk/blog/2024/08/thoi-tiet-can-tho-6.jpg?tr=dpr-2,w-675" width="600" />
+                <div class="p-4">
+                    <h2 class="text-lg font-bold text-white bg-black bg-opacity-50 p-2 rounded">
+                        Tuyến xe từ
+                        <br />
+                        Cần Thơ
+                    </h2>
+                    <div class="mt-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-green-800 font-bold">
+                                TP. Hồ Chí Minh
+                            </span>
+                            <span class="text-gray-800">
+                                165.000đ
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            166km - 3 giờ 12 phút - 24/11/2024
+                        </p>
+                    </div>
+                    <div class="mt-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-green-800 font-bold">
+                                Long Xuyên
+                            </span>
+                            <span class="text-gray-800">
+                                190.000đ
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            203km - 5 giờ - 24/11/2024
+                        </p>
+                    </div>
+                    <div class="mt-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-green-800 font-bold">
+                                Sóc Trăng
+                            </span>
+                            <span class="text-gray-800">
+                                120.000đ
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            99km - 2 giờ 30 phút - 24/11/2024
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function plusSlides(n) {
+        slideIndex += n;
+        showSlides();
+    }
+
+    function currentSlide(n) {
+        slideIndex = n - 1;
+        showSlides();
+    }
+
+    function showSlides() {
+        const slides = document.getElementsByClassName("mySlides");
+        const dots = document.getElementsByClassName("dot");
+
+        if (slideIndex >= slides.length) { slideIndex = 0; }
+        if (slideIndex < 0) { slideIndex = slides.length - 1; }
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"; // Ẩn tất cả các slide
+            slides[i].style.animation = ""; // Reset animation
+        }
+
+        // Hiển thị slide hiện tại và áp dụng animation
+        slides[slideIndex].style.display = "flex";
+        slides[slideIndex].style.animation = "slideInRight 0.5s forwards"; // Hiệu ứng lướt vào
+        dots[slideIndex].className += " active"; // Đánh dấu dot tương ứng
+
+        // Áp dụng hiệu ứng ra ngoài cho slide trước đó
+        const previousSlideIndex = (slideIndex === 0) ? slides.length - 1 : slideIndex - 1;
+        slides[previousSlideIndex].style.animation = "slideOutLeft 0.5s forwards"; // Hiệu ứng lướt ra
+    }
+
+    // Tự động chuyển slide mỗi 5 giây
+    setInterval(function () {
+        plusSlides(1);
+    }, 6000); // Chuyển slide mỗi 5 giây
+</script>
+<style>
+    /* Nút Đặt vé dưới slider */
+    .slider-button-container {
+        text-align: center;
+        margin-top: 10px; /* Khoảng cách giữa slider và nút */
+    }
+
+    .slider-button {
+        background-color: #FF5722; /* Màu cam nổi bật */
+        color: white;
+        padding: 24px 100px; /* Tăng padding để nút cực lớn */
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50px; /* Bo tròn góc hoàn toàn */
+        font-size: 24px; /* Tăng kích thước chữ rất lớn */
+        display: inline-block;
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng khi hover */
+        margin-top: 40px; /* Khoảng cách từ hình ảnh slider */
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); /* Thêm đổ bóng cho nút */
+    }
+
+        /* Hiệu ứng khi hover */
+        .slider-button:hover {
+            background-color: #FF3D00; /* Màu cam đậm khi hover */
+            transform: scale(1.3); /* Phóng to nút mạnh mẽ hơn */
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2); /* Đổ bóng mạnh hơn khi hover */
+        }
+</style>

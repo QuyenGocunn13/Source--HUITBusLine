@@ -1,0 +1,82 @@
+﻿@using QLBVXK.Models
+@model List<HANHKHACH>
+@{
+    ViewBag.Title = "Danh sách hành khách";
+    Layout = "~/Areas/AdminHome/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Quản Lý Hành Khách</h3>
+            <div class="card-tools">
+                @Html.ActionLink("Thêm mới", "ThemKH", "QLKhachHang", null, new { @class = "btn btn-success" })
+            </div>
+        </div>
+
+        <div class="card-body">
+            <!-- Hiển thị thông báo thành công hoặc lỗi -->
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success">
+                    @TempData["SuccessMessage"]
+                </div>
+            }
+            @if (TempData["ErrorMessages"] != null)
+            {
+                <div class="alert alert-danger">
+                    @TempData["ErrorMessages"]
+                </div>
+            }
+
+            @if (Model != null && Model.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>STT</th>
+                                <th>ID</th>
+                                <th>User ID</th>
+                                <th>Họ Tên</th>
+                                <th>Giới Tính</th>
+                                <th>Địa Chỉ</th>
+                                <th>Số điện thoại</th>
+                                <th>Email</th>
+                                <th class="text-center">Tác vụ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.Count; i++)
+                            {
+                                var item = Model[i];
+                                <tr id="trow@item.MaHanhKhach">
+                                    <td>@(i + 1)</td>
+                                    <td>@item.MaHanhKhach</td>
+                                    <td>@item.UserID</td>
+                                    <td class="nowrap">@item.TenHanhKhach</td>
+                                    <td>@item.GioiTinh</td>
+                                    <td class="nowrap">@item.DiaChi</td>
+                                    <td>@item.SoDienThoai</td>
+                                    <td>@item.Email</td>
+                                    <td class="text-center">
+                                        <a href="@Url.Action("SuaKH", "QLKhachHang", new { id = item.MaHanhKhach.Trim() })" class="btn btn-warning btn-sm btn-action">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="@Url.Action("XoaKH", "QLKhachHang", new { id = item.MaHanhKhach.Trim() })" class="btn btn-danger btn-sm btn-action" onclick="return confirm('Bạn có chắc chắn muốn xóa?');">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <p>Không có hành khách nào.</p>
+            }
+        </div>
+    </div>
+</section>

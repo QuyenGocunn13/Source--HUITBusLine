@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLBanVeXeKhachModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="fn_HienThiChiTietVe_Result">
+    <Property Name="MaVeXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ViTriGhe" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="TenTuyenXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiemDi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiemDen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgayKhoiHanh" Type="DateTime" />
+    <Property Name="GioKhoiHanh" Type="Time" />
+    <Property Name="NgayDenDuKien" Type="DateTime" />
+    <Property Name="GioDenDuKien" Type="Time" />
+    <Property Name="GiaTien" Type="Double" Nullable="false" />
+    <Property Name="TrangThai" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="fn_HienThiChiTietVeLoc_Result">
+    <Property Name="MaVeXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ViTriGhe" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="TenTuyenXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiemDi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiemDen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgayKhoiHanh" Type="DateTime" />
+    <Property Name="GioKhoiHanh" Type="Time" />
+    <Property Name="NgayDenDuKien" Type="DateTime" />
+    <Property Name="GioDenDuKien" Type="Time" />
+    <Property Name="GiaTien" Type="Double" Nullable="false" />
+    <Property Name="TrangThai" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="fn_HienThiChuyenXe_Result">
+    <Property Name="MaChuyenXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenTuyenXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BienSoXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgayKhoiHanh" Type="DateTime" />
+    <Property Name="GioKhoiHanh" Type="Time" />
+    <Property Name="GioDenDuKien" Type="Time" />
+    <Property Name="DiemDi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiemDen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenLoaiXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SoGheTrong" Type="Int32" />
+    <Property Name="GiaTien" Type="Double" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="fn_HienThiTatCaChuyenXe_Result">
+    <Property Name="MaChuyenXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenTuyenXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BienSoXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgayKhoiHanh" Type="DateTime" />
+    <Property Name="GioKhoiHanh" Type="Time" />
+    <Property Name="GioDenDuKien" Type="Time" />
+    <Property Name="DiemDi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiemDen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenLoaiXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SoGheTrong" Type="Int32" />
+    <Property Name="GiaTien" Type="Double" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="KiemTraChuyenXe_Result">
+    <Property Name="MaChuyenXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenTaiXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiemDi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiemDen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgayDi" Type="DateTime" />
+    <Property Name="GioDi" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="NgayDenDuKien" Type="DateTime" />
+    <Property Name="GioDenDuKien" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="String" MaxLength="21" FixedLength="false" Unicode="true" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="KiemTraChuyenXeConTrong_Result">
+    <Property Name="MaChuyenXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenTuyenXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiemDi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiemDen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgayDi" Type="DateTime" />
+    <Property Name="GioDi" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="GiaVe" Type="Double" Nullable="false" />
+    <Property Name="SoGheTrong" Type="Int32" />
+    <Property Name="LoaiXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="LayChuyenXeCuoiCungCuaMoiXe_Result">
+    <Property Name="MaXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaChuyenXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaTaiXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenTaiXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiemDi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiemDen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgayDi" Type="DateTime" />
+    <Property Name="GioDi" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="NgayDenDuKien" Type="DateTime" />
+    <Property Name="GioDenDuKien" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="GiaVe" Type="Double" Nullable="false" />
+    <Property Name="SoGheTrong" Type="Int32" />
+    <Property Name="LoaiXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="ThongKeDoanhThuTheoThang_Result">
+    <Property Name="Thang" Type="Int32" />
+    <Property Name="Nam" Type="Int32" />
+    <Property Name="SoVeDaBan" Type="Int32" />
+    <Property Name="TongDoanhThu" Type="Double" />
+  </ComplexType>
+  <EntityType Name="CHUYENXE">
+    <Key>
+      <PropertyRef Name="MaChuyenXe" />
+    </Key>
+    <Property Name="MaChuyenXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaTuyenXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="GiaTien" Type="Double" Nullable="false" />
+    <Property Name="SoGheTrong" Type="Int32" />
+    <Property Name="GioKhoiHanh" Type="Time" Precision="7" />
+    <Property Name="NgayKhoiHanh" Type="DateTime" Precision="0" />
+    <Property Name="GioDenDuKien" Type="Time" Precision="7" />
+    <Property Name="NgayDenDuKien" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="TUYENXE" Relationship="Self.FK_CHUYENXE_TUYENXE" FromRole="CHUYENXE" ToRole="TUYENXE" />
+    <NavigationProperty Name="XE" Relationship="Self.FK_CHUYENXE_XE" FromRole="CHUYENXE" ToRole="XE" />
+    <NavigationProperty Name="PHANCONG_TAIXE_CHUYENXE" Relationship="Self.FK_PHANCONG_CHUYENXE" FromRole="CHUYENXE" ToRole="PHANCONG_TAIXE_CHUYENXE" />
+    <NavigationProperty Name="VEXEs" Relationship="Self.FK_VEXE_CHUYENXE" FromRole="CHUYENXE" ToRole="VEXE" />
+  </EntityType>
+  <EntityType Name="HANHKHACH">
+    <Key>
+      <PropertyRef Name="MaHanhKhach" />
+    </Key>
+    <Property Name="MaHanhKhach" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="UserID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="TenHanhKhach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GioiTinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TAIKHOAN" Relationship="Self.FK_HANHKHACH_TAIKHOAN" FromRole="HANHKHACH" ToRole="TAIKHOAN" />
+    <NavigationProperty Name="VEXEs" Relationship="Self.FK_VEXE_HANHKHACH" FromRole="HANHKHACH" ToRole="VEXE" />
+  </EntityType>
+  <EntityType Name="LOAIXE">
+    <Key>
+      <PropertyRef Name="MaLoaiXe" />
+    </Key>
+    <Property Name="MaLoaiXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenLoaiXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SucChuaXe" Type="Int32" Nullable="false" />
+    <Property Name="LoaiGhe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="XEs" Relationship="Self.FK_XE_LOAIXE" FromRole="LOAIXE" ToRole="XE" />
+  </EntityType>
+  <EntityType Name="PHANCONG_TAIXE_CHUYENXE">
+    <Key>
+      <PropertyRef Name="MaTaiXe" />
+      <PropertyRef Name="MaChuyenXe" />
+    </Key>
+    <Property Name="MaTaiXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaChuyenXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="PhuTrach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CHUYENXE" Relationship="Self.FK_PHANCONG_CHUYENXE" FromRole="PHANCONG_TAIXE_CHUYENXE" ToRole="CHUYENXE" />
+  </EntityType>
+  <EntityType Name="TAIKHOAN">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Pass" Type="String" MaxLength="16" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="UserRole" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="HANHKHACHes" Relationship="Self.FK_HANHKHACH_TAIKHOAN" FromRole="TAIKHOAN" ToRole="HANHKHACH" />
+  </EntityType>
+  <EntityType Name="TAIXE">
+    <Key>
+      <PropertyRef Name="MaTaiXe" />
+    </Key>
+    <Property Name="MaTaiXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenTaiXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CCCD" Type="String" MaxLength="12" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="XE" Relationship="Self.FK_TAIXE_XE" FromRole="TAIXE" ToRole="XE" />
+  </EntityType>
+  <EntityType Name="TINHTHANH">
+    <Key>
+      <PropertyRef Name="MaTinhThanh" />
+    </Key>
+    <Property Name="MaTinhThanh" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenTinhThanh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="TUYENXEs" Relationship="Self.FK_DIEMDEN_TINHTHANH" FromRole="TINHTHANH" ToRole="TUYENXE" />
+    <NavigationProperty Name="TUYENXEs1" Relationship="Self.FK_DIEMDI_TINHTHANH" FromRole="TINHTHANH" ToRole="TUYENXE" />
+  </EntityType>
+  <EntityType Name="TUYENXE">
+    <Key>
+      <PropertyRef Name="MaTuyenXe" />
+    </Key>
+    <Property Name="MaTuyenXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TenTuyenXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiemDi" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DiemDen" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CHUYENXEs" Relationship="Self.FK_CHUYENXE_TUYENXE" FromRole="TUYENXE" ToRole="CHUYENXE" />
+    <NavigationProperty Name="TINHTHANH" Relationship="Self.FK_DIEMDEN_TINHTHANH" FromRole="TUYENXE" ToRole="TINHTHANH" />
+    <NavigationProperty Name="TINHTHANH1" Relationship="Self.FK_DIEMDI_TINHTHANH" FromRole="TUYENXE" ToRole="TINHTHANH" />
+  </EntityType>
+  <EntityType Name="VEXE">
+    <Key>
+      <PropertyRef Name="MaVeXe" />
+    </Key>
+    <Property Name="MaVeXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaHanhKhach" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaChuyenXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ViTriGhe" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="NgayXuat" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CHUYENXE" Relationship="Self.FK_VEXE_CHUYENXE" FromRole="VEXE" ToRole="CHUYENXE" />
+    <NavigationProperty Name="HANHKHACH" Relationship="Self.FK_VEXE_HANHKHACH" FromRole="VEXE" ToRole="HANHKHACH" />
+    <NavigationProperty Name="CHITIETVEXEs" Relationship="Self.FK_CHITIETVEXE_VEXE" FromRole="VEXE" ToRole="CHITIETVEXE" />
+  </EntityType>
+  <EntityType Name="XE">
+    <Key>
+      <PropertyRef Name="MaXe" />
+    </Key>
+    <Property Name="MaXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="BienSoXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaLoaiXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CHUYENXEs" Relationship="Self.FK_CHUYENXE_XE" FromRole="XE" ToRole="CHUYENXE" />
+    <NavigationProperty Name="LOAIXE" Relationship="Self.FK_XE_LOAIXE" FromRole="XE" ToRole="LOAIXE" />
+    <NavigationProperty Name="TAIXEs" Relationship="Self.FK_TAIXE_XE" FromRole="XE" ToRole="TAIXE" />
+  </EntityType>
+  <EntityType Name="CHITIETVEXE">
+    <Key>
+      <PropertyRef Name="MaVeXe" />
+      <PropertyRef Name="DiemDon" />
+      <PropertyRef Name="DiemTra" />
+      <PropertyRef Name="NgayXuat" />
+    </Key>
+    <Property Name="MaVeXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ViTriGhe" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="DiemDon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiemTra" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgayXuat" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="VEXE" Relationship="Self.FK_CHITIETVEXE_VEXE" FromRole="CHITIETVEXE" ToRole="VEXE" />
+  </EntityType>
+  <Association Name="FK_CHUYENXE_TUYENXE">
+    <End Role="TUYENXE" Type="Self.TUYENXE" Multiplicity="1" />
+    <End Role="CHUYENXE" Type="Self.CHUYENXE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TUYENXE">
+        <PropertyRef Name="MaTuyenXe" />
+      </Principal>
+      <Dependent Role="CHUYENXE">
+        <PropertyRef Name="MaTuyenXe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CHUYENXE_XE">
+    <End Role="XE" Type="Self.XE" Multiplicity="1" />
+    <End Role="CHUYENXE" Type="Self.CHUYENXE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XE">
+        <PropertyRef Name="MaXe" />
+      </Principal>
+      <Dependent Role="CHUYENXE">
+        <PropertyRef Name="MaXe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PHANCONG_CHUYENXE">
+    <End Role="CHUYENXE" Type="Self.CHUYENXE" Multiplicity="1" />
+    <End Role="PHANCONG_TAIXE_CHUYENXE" Type="Self.PHANCONG_TAIXE_CHUYENXE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHUYENXE">
+        <PropertyRef Name="MaChuyenXe" />
+      </Principal>
+      <Dependent Role="PHANCONG_TAIXE_CHUYENXE">
+        <PropertyRef Name="MaChuyenXe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VEXE_CHUYENXE">
+    <End Role="CHUYENXE" Type="Self.CHUYENXE" Multiplicity="1" />
+    <End Role="VEXE" Type="Self.VEXE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHUYENXE">
+        <PropertyRef Name="MaChuyenXe" />
+      </Principal>
+      <Dependent Role="VEXE">
+        <PropertyRef Name="MaChuyenXe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HANHKHACH_TAIKHOAN">
+    <End Role="TAIKHOAN" Type="Self.TAIKHOAN" Multiplicity="0..1" />
+    <End Role="HANHKHACH" Type="Self.HANHKHACH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOAN">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="HANHKHACH">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VEXE_HANHKHACH">
+    <End Role="HANHKHACH" Type="Self.HANHKHACH" Multiplicity="1" />
+    <End Role="VEXE" Type="Self.VEXE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HANHKHACH">
+        <PropertyRef Name="MaHanhKhach" />
+      </Principal>
+      <Dependent Role="VEXE">
+        <PropertyRef Name="MaHanhKhach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_XE_LOAIXE">
+    <End Role="LOAIXE" Type="Self.LOAIXE" Multiplicity="1" />
+    <End Role="XE" Type="Self.XE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAIXE">
+        <PropertyRef Name="MaLoaiXe" />
+      </Principal>
+      <Dependent Role="XE">
+        <PropertyRef Name="MaLoaiXe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TAIXE_XE">
+    <End Role="XE" Type="Self.XE" Multiplicity="1" />
+    <End Role="TAIXE" Type="Self.TAIXE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XE">
+        <PropertyRef Name="MaXe" />
+      </Principal>
+      <Dependent Role="TAIXE">
+        <PropertyRef Name="MaXe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DIEMDEN_TINHTHANH">
+    <End Role="TINHTHANH" Type="Self.TINHTHANH" Multiplicity="1" />
+    <End Role="TUYENXE" Type="Self.TUYENXE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TINHTHANH">
+        <PropertyRef Name="MaTinhThanh" />
+      </Principal>
+      <Dependent Role="TUYENXE">
+        <PropertyRef Name="DiemDen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DIEMDI_TINHTHANH">
+    <End Role="TINHTHANH" Type="Self.TINHTHANH" Multiplicity="1" />
+    <End Role="TUYENXE" Type="Self.TUYENXE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TINHTHANH">
+        <PropertyRef Name="MaTinhThanh" />
+      </Principal>
+      <Dependent Role="TUYENXE">
+        <PropertyRef Name="DiemDi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CHITIETVEXE_VEXE">
+    <End Role="VEXE" Type="Self.VEXE" Multiplicity="1" />
+    <End Role="CHITIETVEXE" Type="Self.CHITIETVEXE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VEXE">
+        <PropertyRef Name="MaVeXe" />
+      </Principal>
+      <Dependent Role="CHITIETVEXE">
+        <PropertyRef Name="MaVeXe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLBanVeXeKhachEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CHUYENXEs" EntityType="Self.CHUYENXE" />
+    <EntitySet Name="HANHKHACHes" EntityType="Self.HANHKHACH" />
+    <EntitySet Name="LOAIXEs" EntityType="Self.LOAIXE" />
+    <EntitySet Name="PHANCONG_TAIXE_CHUYENXE" EntityType="Self.PHANCONG_TAIXE_CHUYENXE" />
+    <EntitySet Name="TAIKHOANs" EntityType="Self.TAIKHOAN" />
+    <EntitySet Name="TAIXEs" EntityType="Self.TAIXE" />
+    <EntitySet Name="TINHTHANHs" EntityType="Self.TINHTHANH" />
+    <EntitySet Name="TUYENXEs" EntityType="Self.TUYENXE" />
+    <EntitySet Name="VEXEs" EntityType="Self.VEXE" />
+    <EntitySet Name="XEs" EntityType="Self.XE" />
+    <EntitySet Name="CHITIETVEXEs" EntityType="Self.CHITIETVEXE" />
+    <AssociationSet Name="FK_CHUYENXE_TUYENXE" Association="Self.FK_CHUYENXE_TUYENXE">
+      <End Role="TUYENXE" EntitySet="TUYENXEs" />
+      <End Role="CHUYENXE" EntitySet="CHUYENXEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHUYENXE_XE" Association="Self.FK_CHUYENXE_XE">
+      <End Role="XE" EntitySet="XEs" />
+      <End Role="CHUYENXE" EntitySet="CHUYENXEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PHANCONG_CHUYENXE" Association="Self.FK_PHANCONG_CHUYENXE">
+      <End Role="CHUYENXE" EntitySet="CHUYENXEs" />
+      <End Role="PHANCONG_TAIXE_CHUYENXE" EntitySet="PHANCONG_TAIXE_CHUYENXE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VEXE_CHUYENXE" Association="Self.FK_VEXE_CHUYENXE">
+      <End Role="CHUYENXE" EntitySet="CHUYENXEs" />
+      <End Role="VEXE" EntitySet="VEXEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HANHKHACH_TAIKHOAN" Association="Self.FK_HANHKHACH_TAIKHOAN">
+      <End Role="TAIKHOAN" EntitySet="TAIKHOANs" />
+      <End Role="HANHKHACH" EntitySet="HANHKHACHes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VEXE_HANHKHACH" Association="Self.FK_VEXE_HANHKHACH">
+      <End Role="HANHKHACH" EntitySet="HANHKHACHes" />
+      <End Role="VEXE" EntitySet="VEXEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_XE_LOAIXE" Association="Self.FK_XE_LOAIXE">
+      <End Role="LOAIXE" EntitySet="LOAIXEs" />
+      <End Role="XE" EntitySet="XEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TAIXE_XE" Association="Self.FK_TAIXE_XE">
+      <End Role="XE" EntitySet="XEs" />
+      <End Role="TAIXE" EntitySet="TAIXEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DIEMDEN_TINHTHANH" Association="Self.FK_DIEMDEN_TINHTHANH">
+      <End Role="TINHTHANH" EntitySet="TINHTHANHs" />
+      <End Role="TUYENXE" EntitySet="TUYENXEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DIEMDI_TINHTHANH" Association="Self.FK_DIEMDI_TINHTHANH">
+      <End Role="TINHTHANH" EntitySet="TINHTHANHs" />
+      <End Role="TUYENXE" EntitySet="TUYENXEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHITIETVEXE_VEXE" Association="Self.FK_CHITIETVEXE_VEXE">
+      <End Role="VEXE" EntitySet="VEXEs" />
+      <End Role="CHITIETVEXE" EntitySet="CHITIETVEXEs" />
+    </AssociationSet>
+    <FunctionImport Name="fn_HienThiChiTietVe" IsComposable="true" ReturnType="Collection(QLBanVeXeKhachModel.fn_HienThiChiTietVe_Result)">
+      <Parameter Name="UserID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="fn_HienThiChiTietVeLoc" IsComposable="true" ReturnType="Collection(QLBanVeXeKhachModel.fn_HienThiChiTietVeLoc_Result)">
+      <Parameter Name="UserID" Mode="In" Type="String" />
+      <Parameter Name="MaVeXe" Mode="In" Type="String" />
+      <Parameter Name="NgayKhoiHanh" Mode="In" Type="DateTime" />
+      <Parameter Name="DiemDi" Mode="In" Type="String" />
+      <Parameter Name="DiemDen" Mode="In" Type="String" />
+      <Parameter Name="TrangThai" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="fn_HienThiChuyenXe" IsComposable="true" ReturnType="Collection(QLBanVeXeKhachModel.fn_HienThiChuyenXe_Result)">
+      <Parameter Name="DiemDi" Mode="In" Type="String" />
+      <Parameter Name="DiemDen" Mode="In" Type="String" />
+      <Parameter Name="NgayKhoiHanh" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="fn_HienThiTatCaChuyenXe" IsComposable="true" ReturnType="Collection(QLBanVeXeKhachModel.fn_HienThiTatCaChuyenXe_Result)" />
+    <FunctionImport Name="KiemTraChuyenXe" IsComposable="true" ReturnType="Collection(QLBanVeXeKhachModel.KiemTraChuyenXe_Result)">
+      <Parameter Name="MaTaiXe" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="KiemTraChuyenXeConTrong" IsComposable="true" ReturnType="Collection(QLBanVeXeKhachModel.KiemTraChuyenXeConTrong_Result)">
+      <Parameter Name="DiemDi" Mode="In" Type="String" />
+      <Parameter Name="DiemDen" Mode="In" Type="String" />
+      <Parameter Name="NgayDi" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="LayChuyenXeCuoiCungCuaMoiXe" IsComposable="true" ReturnType="Collection(QLBanVeXeKhachModel.LayChuyenXeCuoiCungCuaMoiXe_Result)" />
+    <FunctionImport Name="ThongKeDoanhThuTheoThang" IsComposable="true" ReturnType="Collection(QLBanVeXeKhachModel.ThongKeDoanhThuTheoThang_Result)">
+      <Parameter Name="Thang" Mode="In" Type="Int32" />
+      <Parameter Name="Nam" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="HienThiThongTinGhe">
+      <Parameter Name="MaChuyenXe" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_CapNhatSoGheTrong" />
+    <FunctionImport Name="sp_DatVe" ReturnType="Collection(QLBanVeXeKhachModel.sp_DatVe_Result)">
+      <Parameter Name="MaHanhKhach" Mode="In" Type="String" />
+      <Parameter Name="MaChuyenXe" Mode="In" Type="String" />
+      <Parameter Name="ViTriGhe" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_HienThiChuyenXe" ReturnType="Collection(QLBanVeXeKhachModel.sp_HienThiChuyenXe_Result)">
+      <Parameter Name="DiemDi" Mode="In" Type="String" />
+      <Parameter Name="DiemDen" Mode="In" Type="String" />
+      <Parameter Name="NgayKhoiHanh" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_InsertChuyenXe">
+      <Parameter Name="MaTuyenXe" Mode="In" Type="String" />
+      <Parameter Name="MaXe" Mode="In" Type="String" />
+      <Parameter Name="GiaTien" Mode="In" Type="Double" />
+      <Parameter Name="GioKhoiHanh" Mode="In" Type="Time" />
+      <Parameter Name="NgayKhoiHanh" Mode="In" Type="DateTime" />
+      <Parameter Name="GioDenDuKien" Mode="In" Type="Time" />
+      <Parameter Name="NgayDenDuKien" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_PhanCongXe" />
+    <FunctionImport Name="sp_TaoTaiKhoan">
+      <Parameter Name="HoTen" Mode="In" Type="String" />
+      <Parameter Name="SoDienThoai" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Pass" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ThemChuyenXe">
+      <Parameter Name="MaXe" Mode="In" Type="String" />
+      <Parameter Name="MaTaiXe" Mode="In" Type="String" />
+      <Parameter Name="TenTuyenXe" Mode="In" Type="String" />
+      <Parameter Name="TenDiemDi" Mode="In" Type="String" />
+      <Parameter Name="TenDiemDen" Mode="In" Type="String" />
+      <Parameter Name="NgayKhoiHanh" Mode="In" Type="DateTime" />
+      <Parameter Name="GioKhoiHanh" Mode="In" Type="Time" />
+      <Parameter Name="NgayDenDuKien" Mode="In" Type="DateTime" />
+      <Parameter Name="GioDenDuKien" Mode="In" Type="Time" />
+      <Parameter Name="GiaVe" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ThemHanhKhach">
+      <Parameter Name="SoDienThoai" Mode="In" Type="String" />
+      <Parameter Name="TenHanhKhach" Mode="In" Type="String" />
+      <Parameter Name="GioiTinh" Mode="In" Type="String" />
+      <Parameter Name="DiaChi" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ThongKeChuyenXeMuaNhieuNhatTheoThang" />
+    <FunctionImport Name="sp_ThongKeDoanhThuTheoThang" ReturnType="Collection(QLBanVeXeKhachModel.sp_ThongKeDoanhThuTheoThang_Result)">
+      <Parameter Name="Nam" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ThongKeDoanhThuTong" />
+    <FunctionImport Name="sp_ThongKeTop5ChuyenXeTheoThang" />
+    <FunctionImport Name="SP_TIMCHUYENXE" ReturnType="Collection(QLBanVeXeKhachModel.SP_TIMCHUYENXE_Result)">
+      <Parameter Name="DiemDi" Mode="In" Type="String" />
+      <Parameter Name="DiemDen" Mode="In" Type="String" />
+      <Parameter Name="NgayDi" Mode="In" Type="DateTime" />
+      <Parameter Name="NgayVe" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_TinhTongSoLuongVeTheoNam" />
+    <FunctionImport Name="SP_XemVeXe" ReturnType="Collection(QLBanVeXeKhachModel.SP_XemVeXe_Result)">
+      <Parameter Name="MaHanhKhach" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_XoaChuyenXe">
+      <Parameter Name="MaChuyenXe" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_XoaHanhKhach">
+      <Parameter Name="MaHanhKhach" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="them_taixe">
+      <Parameter Name="MaXe" Mode="In" Type="String" />
+      <Parameter Name="TenTaiXe" Mode="In" Type="String" />
+      <Parameter Name="SoDienThoai" Mode="In" Type="String" />
+      <Parameter Name="CCCD" Mode="In" Type="String" />
+      <Parameter Name="DiaChi" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="XoaTaiKhoan" ReturnType="Collection(String)">
+      <Parameter Name="UserID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="XoaTaiXeVaPhanCong">
+      <Parameter Name="MaTaiXe" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="sysdiagrams" EntityType="QLBanVeXeKhachModel.sysdiagram" />
+  </EntityContainer>
+  <ComplexType Name="sp_DatVe_Result">
+    <Property Type="String" Name="MaVeXe" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="MaHanhKhach" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="MaChuyenXe" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="ViTriGhe" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="TrangThai" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="NgayXuat" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_HienThiChuyenXe_Result">
+    <Property Type="String" Name="MaChuyenXe" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="TenTuyenXe" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="BienSoXe" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="NgayKhoiHanh" Nullable="true" />
+    <Property Type="Time" Name="GioKhoiHanh" Nullable="true" />
+    <Property Type="Time" Name="GioDenDuKien" Nullable="true" />
+    <Property Type="String" Name="DiemDi" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="DiemDen" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TenLoaiXe" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="SoGheTrong" Nullable="true" />
+    <Property Type="Double" Name="GiaTien" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_ThongKeDoanhThuTheoThang_Result">
+    <Property Type="Int32" Name="Thang" Nullable="true" />
+    <Property Type="Double" Name="TongDoanhThuTheo_Thang" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_TIMCHUYENXE_Result">
+    <Property Type="String" Name="MaChuyenXe" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="TenTuyenXe" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="DiemDi" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DiemDen" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="NgayDi" Nullable="true" />
+    <Property Type="String" Name="GioDi" Nullable="true" MaxLength="5" />
+    <Property Type="DateTime" Name="NgayDen" Nullable="true" />
+    <Property Type="String" Name="GioDen" Nullable="true" MaxLength="5" />
+    <Property Type="Double" Name="GiaTien" Nullable="false" />
+    <Property Type="Int32" Name="SoGheTrong" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_XemVeXe_Result">
+    <Property Type="String" Name="MaVeXe" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="TenHanhKhach" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DiemDi" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="DiemDen" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="GioKhoiHanh" Nullable="true" MaxLength="5" />
+    <Property Type="DateTime" Name="NgayKhoiHanh" Nullable="true" />
+    <Property Type="String" Name="GioDenDuKien" Nullable="true" MaxLength="5" />
+    <Property Type="DateTime" Name="NgayDenDuKien" Nullable="true" />
+    <Property Type="Double" Name="GiaTien" Nullable="false" />
+    <Property Type="Int32" Name="SoGheTrong" Nullable="true" />
+    <Property Type="String" Name="TrangThai" Nullable="false" MaxLength="21" />
+  </ComplexType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+</Schema>

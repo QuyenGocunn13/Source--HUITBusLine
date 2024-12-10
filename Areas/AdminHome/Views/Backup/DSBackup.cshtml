@@ -1,0 +1,140 @@
+﻿@using System.IO
+@model List<string>
+
+@{
+    ViewBag.Title = "Danh sách sao lưu cơ sở dữ liệu";
+    Layout = "~/Areas/AdminHome/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Danh Sách Sao Lưu Cơ Sở Dữ Liệu</h3>
+            <div class="card-tools">
+                <!-- Dropdown lựa chọn loại sao lưu -->
+                <form action="@Url.Action("BackupDatabase", "Backup")" method="post" class="d-inline-block">
+                    <select name="backupType" class="form-control form-control-sm d-inline-block" style="width: auto;">
+                        <option value="Full" selected>Full Backup</option>
+                        <option value="Differential">Differential Backup</option>
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-primary ml-2">Sao lưu mới</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <!-- Hiển thị thông báo thành công hoặc lỗi -->
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success" id="successMessage">
+                    @TempData["SuccessMessage"]
+                </div>
+            }
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <div class="alert alert-danger" id="errorMessage">
+                    @TempData["ErrorMessage"]
+                </div>
+            }
+
+            @if (Model != null && Model.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Tên Tệp</th>
+                                <th class="text-center">Hành Động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.Count; i++)
+                            {
+                                var fileName = Model[i];
+                                <tr class="table-row">
+                                    <td>@(i + 1)</td>
+                                    <td>@fileName</td>
+                                    <td class="text-center">
+                                        <a href="@Url.Action("DeleteBackup", "Backup", new { fileName = fileName })" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa tệp sao lưu này?');">
+                                            <i class="fas fa-trash-alt"></i> Xóa
+                                        </a>
+                                        <!-- Nút khôi phục với màu sắc dịu -->
+                                        <form action="@Url.Action("RestoreDatabase", "Backup")" method="post" class="d-inline-block">
+                                            <input type="hidden" name="backupFile" value="@fileName" />
+                                            <button type="submit" class="btn btn-warning btn-sm p-2">
+                                                <i class="fas fa-sync-alt"></i> Khôi phục
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <p>Không có tệp sao lưu nào.</p>
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    .table-row:hover {
+        background-color: #f1f1f1;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+    }
+
+    .btn-sm {
+        font-size: 14px;
+        padding: 8px 16px;
+        margin: 2px 0;
+    }
+
+    .btn-info {
+        background-color: #5bc0de;
+        border-color: #46b8da;
+    }
+
+        .btn-info:hover {
+            background-color: #31b0d5;
+            border-color: #269abc;
+        }
+
+    .btn-danger {
+        background-color: #d9534f;
+        border-color: #d43f00;
+    }
+
+        .btn-danger:hover {
+            background-color: #c9302c;
+            border-color: #ac2925;
+        }
+
+    .btn-warning {
+        background-color: #f0ad4e;
+        border-color: #ec971f;
+    }
+
+        .btn-warning:hover {
+            background-color: #ec971f;
+            border-color: #d58512;
+        }
+</style>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        setTimeout(function () {
+            $('#successMessage').fadeOut('slow');
+            $('#errorMessage').fadeOut('slow');
+        }, 3000); // 3000ms = 3 giây
+    });
+</script>

@@ -1,0 +1,716 @@
+﻿@using QLBVXK.Models
+@{
+
+    Layout = "~/Views/Shared/_Layouthome.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn Ghế</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .containerve {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .header h1 {
+                font-size: 24px;
+                margin: 0;
+            }
+
+            .header a {
+                color: #1a73e8;
+                text-decoration: none;
+            }
+
+        .seats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+            .seats .level {
+                width: 45%;
+            }
+
+                .seats .level h2 {
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                }
+
+                .seats .level .seat-row {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                }
+
+                .seats .level .seat {
+                    width: 40px;
+                    height: 40px;
+                    border: 2px solid #1a73e8;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 14px;
+                    color: #1a73e8;
+                    cursor: pointer;
+                }
+
+                    .seats .level .seat.sold {
+                        background-color: #d3d3d3;
+                        color: #fff;
+                        border-color: #d3d3d3;
+                    }
+
+                    .seats .level .seat.selected {
+                        background-color: #ffebee;
+                        color: #ff5252;
+                        border-color: #ff5252;
+                    }
+
+        .legend {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+
+        .legend-box {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            border-radius: 3px;
+        }
+
+        .legend-sold {
+            background-color: #e0e0e0;
+        }
+
+        .legend-available {
+            background-color: #e3f2fd;
+            border: 1px solid #64b5f6;
+        }
+
+        .legend-selected {
+            background-color: #ffccbc;
+            border: 1px solid #e57373;
+        }
+
+        .form-container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+            .form-header h6 {
+                font-weight: bold;
+            }
+
+            .form-header a {
+                text-decoration: none;
+                font-size: 14px;
+                color: #e57373;
+            }
+
+        .form-label {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .form-control {
+            border-radius: 5px;
+        }
+
+        .form-check-input {
+            margin-right: 10px;
+        }
+
+        .terms-link {
+            color: #e57373;
+            text-decoration: underline;
+        }
+
+        .policy {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #616161;
+        }
+
+            .policy strong {
+                color: #e57373;
+            }
+
+
+        .form-header h6 {
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .form-label {
+            font-weight: bold;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .form-select {
+            border-radius: 5px;
+        }
+
+        .text-danger {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .price-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .btn-custom {
+            width: 120px;
+            border-radius: 20px;
+        }
+
+        .btn-cancel {
+            background-color: #fff;
+            color: #f05123;
+            border: 1px solid #f05123;
+        }
+
+        .btn-pay {
+            background-color: #f05123; /* Màu nền nút */
+            color: #fff; /* Màu chữ */
+            border: none; /* Không viền */
+            padding: 10px 20px; /* Khoảng cách bên trong nút */
+            font-size: 16px; /* Kích thước chữ */
+            border-radius: 5px; /* Bo góc */
+            cursor: pointer; /* Con trỏ chuột dạng tay */
+            transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hiệu ứng mượt */
+        }
+
+            .btn-pay:hover {
+                transform: scale(1.1); /* Phóng to nút lên 10% */
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Tạo bóng cho nút */
+            }
+
+        .info-box {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            min-height: 300px; /* Đảm bảo hộp bên phải đồng đều */
+        }
+
+            .info-box h6 {
+                font-weight: bold;
+                margin-bottom: 15px;
+                font-size: 16px;
+            }
+
+            .info-box p {
+                margin: 5px 0;
+            }
+
+        .text-success {
+            color: #28a745;
+        }
+
+        .text-danger {
+            color: #dc3545;
+        }
+
+        .text-warning {
+            color: #ffc107;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="containerve mt-4">
+        <h5 class="mb-4">Chọn ghế<a href="#" class="ms-3 text-primary">Thông tin xe</a></h5>
+        <div class="row">
+
+            <div>@Session["loaighe"] @ViewBag.MaChuyenXe, @ViewBag.loaixe</div>
+            <!-- Cột bên trái -->
+            <div class="col-lg-8">
+                <div>@ViewBag.GheDaDatxg</div>
+                <!-- Chọn ghế -->
+                @if (ViewBag.loaixe == "Thường")
+                {
+                    <div class="seats">
+                        <div class="level">
+                            <h2>Tầng dưới</h2>
+                            <div class="seat-row">
+
+                                @foreach (var seat in new[] { "A1", "A2" })
+                                {
+                                    var isSold = ViewBag.GheDaDat != null && ((List<string>)ViewBag.GheDaDat).Contains(seat);
+                                    var seatClass = isSold ? "seat sold" : "seat";
+                                    <div class="@seatClass" data-seat="@seat">@seat</div>
+                                }
+                            </div>
+                            <div class="seat-row">
+                                @foreach (var seat in new[] { "A3", "A4", "A5" })
+                                {
+                                    var isSold = ViewBag.GheDaDat != null && ((List<string>)ViewBag.GheDaDat).Contains(seat);
+                                    var seatClass = isSold ? "seat sold" : "seat";
+                                    <div class="@seatClass" data-seat="@seat">@seat</div>
+                                }
+                            </div>
+                            <div class="seat-row">
+                                @foreach (var seat in new[] { "A6", "A7", "A8" })
+                                {
+                                    var isSold = ViewBag.GheDaDat != null && ((List<string>)ViewBag.GheDaDat).Contains(seat);
+                                    var seatClass = isSold ? "seat sold" : "seat";
+                                    <div class="@seatClass" data-seat="@seat">@seat</div>
+                                }
+                            </div>
+                            <div class="seat-row">
+                                @foreach (var seat in new[] { "A9", "A10", "A11" })
+                                {
+                                    var isSold = ViewBag.GheDaDat != null && ((List<string>)ViewBag.GheDaDat).Contains(seat);
+                                    var seatClass = isSold ? "seat sold" : "seat";
+                                    <div class="@seatClass" data-seat="@seat">@seat</div>
+                                }
+                            </div>
+                            <div class="seat-row">
+                                @foreach (var seat in new[] { "A12", "A13", "A14" })
+                                {
+                                    var isSold = ViewBag.GheDaDat != null && ((List<string>)ViewBag.GheDaDat).Contains(seat);
+                                    var seatClass = isSold ? "seat sold" : "seat";
+                                    <div class="@seatClass" data-seat="@seat">@seat</div>
+                                }
+                            </div>
+                            <div class="seat-row">
+                                @foreach (var seat in new[] { "A15", "A16", "A17" })
+                                {
+                                    var isSold = ViewBag.GheDaDat != null && ((List<string>)ViewBag.GheDaDat).Contains(seat);
+                                    var seatClass = isSold ? "seat sold" : "seat";
+                                    <div class="@seatClass" data-seat="@seat">@seat</div>
+                                }
+                            </div>
+                        </div>
+                        <div class="level">
+                            <h2>Tầng trên</h2>
+                            <div class="seat-row">
+                                @foreach (var seat in new[] { "B1", "B2" })
+                                {
+                                    var isSold = ViewBag.GheDaDat != null && ((List<string>)ViewBag.GheDaDat).Contains(seat);
+                                    var seatClass = isSold ? "seat sold" : "seat";
+                                    <div class="@seatClass" data-seat="@seat">@seat</div>
+                                }
+                            </div>
+                            <div class="seat-row">
+                                @foreach (var seat in new[] { "B3", "B4", "B5" })
+                                {
+                                    var isSold = ViewBag.GheDaDat != null && ((List<string>)ViewBag.GheDaDat).Contains(seat);
+                                    var seatClass = isSold ? "seat sold" : "seat";
+                                    <div class="@seatClass" data-seat="@seat">@seat</div>
+                                }
+                            </div>
+                            <div class="seat-row">
+                                @foreach (var seat in new[] { "B6", "B7", "B8" })
+                                {
+                                    var isSold = ViewBag.GheDaDat != null && ((List<string>)ViewBag.GheDaDat).Contains(seat);
+                                    var seatClass = isSold ? "seat sold" : "seat";
+                                    <div class="@seatClass" data-seat="@seat">@seat</div>
+                                }
+                            </div>
+                            <div class="seat-row">
+                                @foreach (var seat in new[] { "B9", "B10", "B11" })
+                                {
+                                    var isSold = ViewBag.GheDaDat != null && ((List<string>)ViewBag.GheDaDat).Contains(seat);
+                                    var seatClass = isSold ? "seat sold" : "seat";
+                                    <div class="@seatClass" data-seat="@seat">@seat</div>
+                                }
+                            </div>
+                            <div class="seat-row">
+                                @foreach (var seat in new[] { "B12", "B13", "B14" })
+                                {
+                                    var isSold = ViewBag.GheDaDat != null && ((List<string>)ViewBag.GheDaDat).Contains(seat);
+                                    var seatClass = isSold ? "seat sold" : "seat";
+                                    <div class="@seatClass" data-seat="@seat">@seat</div>
+                                }
+                            </div>
+                            <div class="seat-row">
+                                @foreach (var seat in new[] { "B15", "B16", "B17" })
+                                {
+                                    var isSold = ViewBag.GheDaDat != null && ((List<string>)ViewBag.GheDaDat).Contains(seat);
+                                    var seatClass = isSold ? "seat sold" : "seat";
+                                    <div class="@seatClass" data-seat="@seat">@seat</div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+                else if (ViewBag.loaixe == "VIP")
+                {
+                    <div class="seats">
+                        <div class="level">
+                            <h2>Tầng dưới</h2>
+                            <!-- Hàng ghế tầng dưới -->
+                            <div class="seat-row">
+                                @foreach (var seat in new[] { "A1", "A2" }) // Ghế 1, 2
+                                {
+                                    var isSold = ViewBag.GheDaDat != null && ((List<string>)ViewBag.GheDaDat).Contains(seat);
+                                    var seatClass = isSold ? "seat sold" : "seat";
+                                    <div class="@seatClass" data-seat="@seat">@seat</div>
+                                }
+                            </div>
+                            <div class="seat-row">
+                                @foreach (var seat in new[] { "A3", "A4" }) // Ghế 3, 4
+                                {
+                                    var isSold = ViewBag.GheDaDat != null && ((List<string>)ViewBag.GheDaDat).Contains(seat);
+                                    var seatClass = isSold ? "seat sold" : "seat";
+                                    <div class="@seatClass" data-seat="@seat">@seat</div>
+                                }
+                            </div>
+                            <div class="seat-row">
+                                @foreach (var seat in new[] { "A5", "A6" }) // Ghế 5, 6
+                                {
+                                    var isSold = ViewBag.GheDaDat != null && ((List<string>)ViewBag.GheDaDat).Contains(seat);
+                                    var seatClass = isSold ? "seat sold" : "seat";
+                                    <div class="@seatClass" data-seat="@seat">@seat</div>
+                                }
+                            </div>
+                            <div class="seat-row">
+                                @foreach (var seat in new[] { "A7", "A8" }) // Ghế 7, 8
+                                {
+                                    var isSold = ViewBag.GheDaDat != null && ((List<string>)ViewBag.GheDaDat).Contains(seat);
+                                    var seatClass = isSold ? "seat sold" : "seat";
+                                    <div class="@seatClass" data-seat="@seat">@seat</div>
+                                }
+                            </div>
+                        </div>
+
+                        <div style="width: 300px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+                        <div class="level">
+                            <h2>Tầng trên</h2>
+                            <!-- Hàng ghế tầng trên -->
+                            <div class="seat-row">
+                                @foreach (var seat in new[] { "B1", "B2" }) // Ghế 1, 2
+                                {
+                                    var isSold = ViewBag.GheDaDat != null && ((List<string>)ViewBag.GheDaDat).Contains(seat);
+                                    var seatClass = isSold ? "seat sold" : "seat";
+                                    <div class="@seatClass" data-seat="@seat">@seat</div>
+                                }
+                            </div>
+                            <div class="seat-row">
+                                @foreach (var seat in new[] { "B3", "B4" }) // Ghế 3, 4
+                                {
+                                    var isSold = ViewBag.GheDaDat != null && ((List<string>)ViewBag.GheDaDat).Contains(seat);
+                                    var seatClass = isSold ? "seat sold" : "seat";
+                                    <div class="@seatClass" data-seat="@seat">@seat</div>
+                                }
+                            </div>
+                            <div class="seat-row">
+                                @foreach (var seat in new[] { "B5", "B6" }) // Ghế 5, 6
+                                {
+                                    var isSold = ViewBag.GheDaDat != null && ((List<string>)ViewBag.GheDaDat).Contains(seat);
+                                    var seatClass = isSold ? "seat sold" : "seat";
+                                    <div class="@seatClass" data-seat="@seat">@seat</div>
+                                }
+                            </div>
+                            <div class="seat-row">
+                                @foreach (var seat in new[] { "B7", "B8" }) // Ghế 7, 8
+                                {
+                                    var isSold = ViewBag.GheDaDat != null && ((List<string>)ViewBag.GheDaDat).Contains(seat);
+                                    var seatClass = isSold ? "seat sold" : "seat";
+                                    <div class="@seatClass" data-seat="@seat">@seat</div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <div class="legend mt-4">
+                    <div class="legend-item">
+                        <div class="legend-box legend-sold"></div>
+                        Đã bán
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-box legend-available"></div>
+                        Còn trống
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-box legend-selected"></div>
+                        Đang chọn
+                    </div>
+                </div>
+            </div>
+            <!-- Cột bên phải -->
+            <div class="col-lg-4">
+                <!-- Thông tin lượt đi -->
+                <div class="info-box">
+                    <h6>Thông tin chuyến xe</h6>
+                    <p><strong>Tuyến xe:</strong> @ViewBag.TuyenXe</p>
+                    <p><strong>Thời gian xuất bến:</strong> @ViewBag.NgayKhoiHanh</p>
+                    <p><strong>Số lượng ghế:</strong> <span id="seatCount">0</span></p>
+                    <p><strong>Số ghế:</strong> <span id="selectedSeat">Chưa chọn</span></p>
+                    <p><strong>Tổng tiền lượt đi:</strong> <span id="totalAmount">0 VNĐ</span></p>
+
+                </div>
+                <!-- Chi tiết giá -->
+                <div class="info-box mt-4">
+                    <h6>Chi tiết giá</h6>
+                    <p><strong>Giá vé lượt đi:</strong> <span id="totalAmount">0 VNĐ</span></p>
+                    <p><strong>Phí thanh toán:</strong> <span class="text-success">0đ</span></p>
+                    <hr>
+                    <p><strong>Tổng tiền:</strong> <span id="totalAmount">0 VNĐ</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thông tin khách hàng -->
+        <div class="form-container mt-4">
+            <div class="form-header">
+                <h6>Thông tin khách hàng</h6>
+                <a href="#">ĐIỀU KHOẢN & LƯU Ý</a>
+            </div>
+            <form>
+                <div class="mb-3">
+                    <label for="fullname" class="form-label">Họ và tên <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="HoVaTen" name="fullname"
+                           placeholder="" value="@ViewBag.TenHanhKhach" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Số điện thoại <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="SoDienThoai" name="phone"
+                           placeholder="" value="@ViewBag.SoDienThoai" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="Email" name="email"
+                           placeholder="" value="@ViewBag.Email" required>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="terms" required>
+                    <label class="form-check-label" for="terms">
+                        Chấp nhận <a href="#" class="terms-link">điều khoản</a> đặt vé & chính sách bảo mật thông tin của nhà xe HUIT
+                    </label>
+                </div>
+            </form>
+        </div>
+        <div class="info-box mt-4">
+            <div class="form-header">
+                <h6>Thông tin đón trả</h6>
+            </div>
+
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Điểm đón</label>
+                    <select class="form-select">
+                        <option selected>Bến xe HUIT</option>
+                    </select>
+                    <p class="text-danger mt-2">
+                        Quý khách vui lòng có mặt tại Bến xe/Văn Phòng<br>
+                        <strong>Bến xe HUIT Trước 30 phút xe xuất bến</strong><br>
+                        để được trung chuyển hoặc kiểm tra thông tin trước khi lên xe.
+                    </p>
+                </div>
+
+                <div class="price-box mt-4">
+                    <span>HUIT PAY</span>
+                    <span class="text-danger">230.000đ</span>
+                </div>
+
+                <div class="d-flex justify-content-between mt-4">
+                    <form id="datVeForm" method="post" action="@Url.Action("DatVe", "Ve")">
+                        <!-- Các input hidden chứa dữ liệu -->
+                        <input type="hidden" id="SoLuongGhe" name="SoLuongGhe" />
+                        <input type="hidden" id="SoGhe" name="SoGhe" />
+                        <input type="hidden" id="TongTien" name="TongTien" />
+                        <input type="hidden" id="HoVaTen" name="fullname" value="@ViewBag.TenHanhKhach" />
+                        <input type="hidden" id="SoDienThoai" name="phone" value="@ViewBag.SoDienThoai" />
+                        <input type="hidden" id="Email" name="email" value="@ViewBag.Email" />
+                        <input type="hidden" id="ViTriGhe" name="ViTriGhe" />
+                        <input type="hidden" id="NgayKhoiHanh" name="NgayKhoiHanh" value="@ViewBag.NgayKhoiHanh" />
+                        <input type="hidden" id="MaChuyenXe" name="MaChuyenXe" value="@ViewBag.MaChuyenXe" />
+                        <input type="hidden" id="MaHanhKhach" name="MaHanhKhach" value="@Session["MaHanhKhach"]" />
+
+                        <!-- Nút thanh toán -->
+                        <button type="button" class="btn btn-pay">Xác Nhận</button>
+                    </form>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+  // Khởi tạo khi trang được load
+  document.addEventListener('DOMContentLoaded', () => {
+      // Thiết lập các ghế đã bán
+      const soldSeats = []; // Đây là danh sách từ server (ví dụ: ["A01", "B05"])
+      soldSeats.forEach(seatId => {
+          const seat = document.querySelector(`.seat[data-seat='${seatId}']`);
+          if (seat) {
+              seat.classList.add('sold');
+          }
+      });
+
+      // Thêm sự kiện click cho các ghế khả dụng
+      document.querySelectorAll('.seat:not(.sold)').forEach(seat => {
+          seat.addEventListener('click', () => {
+              seat.classList.toggle('selected');
+              updateSelectedSeats(); // Cập nhật danh sách ghế đã chọn
+          });
+      });
+  });
+
+  // Cập nhật danh sách ghế đã chọn
+  function updateSelectedSeats() {
+      // Lấy danh sách ghế được chọn
+      const selectedSeats = Array.from(document.querySelectorAll('.seat.selected'))
+          .map(seat => seat.textContent.trim()); // Lấy nội dung của mỗi ghế
+
+      // Cập nhật hiển thị số ghế và danh sách ghế
+      document.getElementById('selectedSeat').textContent = selectedSeats.join(', ') || 'Chưa chọn';
+
+      // Cập nhật số lượng ghế
+      const seatCount = selectedSeats.length;
+      document.getElementById('seatCount').textContent = seatCount;
+
+      // Cập nhật tổng tiền
+      const giaTien = parseInt('@ViewBag.GiaTien'); // Giá tiền mỗi ghế
+      const totalAmount = seatCount * giaTien;
+
+      // Cập nhật giá trị "Tổng tiền lượt đi" và "Tổng tiền" trong chi tiết giá
+      document.querySelectorAll('#totalAmount').forEach(element => {
+          element.textContent = totalAmount.toLocaleString() + ' VNĐ';
+      });
+  }
+
+ // Sự kiện click cho nút "Thanh toán"
+document.addEventListener('DOMContentLoaded', () => {
+    const payButton = document.querySelector('.btn-pay');
+
+    if (payButton) {
+        payButton.addEventListener('click', (event) => {
+             //Lấy thông tin từ các input khách hàng
+            const fullname = document.getElementById('HoVaTen').value.trim();
+            const phone = document.getElementById('SoDienThoai').value.trim();
+            const email = document.getElementById('Email').value.trim();
+
+            if (!fullname || !phone || !email) {
+                alert("Vui lòng nhập đầy đủ thông tin khách hàng!");
+                return;
+            }
+
+            // Lấy danh sách ghế được chọn
+            const selectedSeats = Array.from(document.querySelectorAll('.seat.selected'))
+                .map(seat => seat.textContent.trim());
+            const seatCount = selectedSeats.length;
+
+            if (seatCount === 0) {
+                alert("Vui lòng chọn ít nhất một ghế!");
+                return;
+            }
+
+            // Giá tiền mỗi ghế
+            const giaTien = parseInt('@ViewBag.GiaTien') || 0;
+            if (giaTien === 0) {
+                alert("Giá tiền không hợp lệ!");
+                return;
+            }
+
+            // Tính tổng tiền
+            const totalAmount = seatCount * giaTien;
+
+            // Điền thông tin vào các input hidden trong form
+            document.getElementById('SoLuongGhe').value = seatCount;
+            document.getElementById('SoGhe').value = selectedSeats.join(', ');
+            document.getElementById('TongTien').value = totalAmount;
+            document.getElementById('ViTriGhe').value = selectedSeats[0] || ''; // Vị trí ghế đầu tiên
+
+            // Submit form
+            document.getElementById('datVeForm').submit();
+        });
+    }
+});
+document.querySelector('.btn-pay').addEventListener('click', () => {
+    const maChuyenXe = document.getElementById('MaChuyenXe').value;
+    const selectedSeats = Array.from(document.querySelectorAll('.seat.selected'))
+        .map(seat => seat.dataset.seat);
+    const fullname = document.getElementById('HoVaTen').value.trim();
+    const phone = document.getElementById('SoDienThoai').value.trim();
+    const email = document.getElementById('Email').value.trim();
+    const giaTien = parseInt('@ViewBag.GiaTien') || 0;
+
+    if (!fullname || !phone || !email || selectedSeats.length === 0) {
+        alert("Vui lòng nhập đầy đủ thông tin và chọn ghế!");
+        return;
+    }
+
+    // Gửi dữ liệu qua AJAX hoặc submit form
+    fetch('@Url.Action("DatVe", "Ve")', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ maChuyenXe, viTriGhe: selectedSeats, hoVaTen: fullname, soDienThoai: phone, email, giaTien })
+    })
+    .then(response => {
+        if (response.ok) {
+            window.location.href = '@Url.Action("DatVeThanhToan", "Ve")';
+        } else {
+            alert("Có lỗi xảy ra khi đặt vé!");
+        }
+    });
+});
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+

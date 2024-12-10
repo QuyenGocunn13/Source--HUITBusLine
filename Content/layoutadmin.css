@@ -1,0 +1,324 @@
+﻿body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(240, 240, 240, 0.5);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #34495e;
+    border-radius: 10px;
+    border: 2px solid rgba(240, 240, 240, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+    body::-webkit-scrollbar-thumb:hover {
+        background-color: #2c3e50;
+    }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 0;
+}
+
+.main-content {
+    background-color: rgb(246, 245, 254);
+    padding: 20px;
+    margin-left: 250px;
+    transition: margin-left 0.3s;
+}
+
+.nav-bar {
+    background-color: #2c3e50;
+    color: white;
+    width: 250px;
+    height: 100vh;
+    transition: width 0.3s ease;
+    position: fixed;
+    overflow-y: auto;
+}
+
+    .nav-bar.collapsed {
+        width: 60px;
+    }
+
+    .nav-bar a {
+        color: white;
+        text-decoration: none;
+    }
+
+.element-navbar div {
+    position: relative;
+    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+    .element-navbar div:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+.element-navbar a:hover {
+    color: #1abc9c;
+}
+
+.nav-bar.collapsed .element-navbar div {
+    text-align: center;
+    padding: 10px 0;
+}
+
+    .nav-bar.collapsed .element-navbar div a {
+        display: none;
+    }
+
+.nav-bar.collapsed i {
+    margin: 0;
+    display: block;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #34495e;
+    color: white;
+    font-weight: bold;
+}
+
+    .title i {
+        margin-right: 10px;
+    }
+
+.nav-bar.collapsed .title h2 {
+    display: none;
+}
+
+.nav-bar.collapsed .title i {
+    margin: 0;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 10px 16px;
+    margin: 20px auto;
+    border-radius: 6px;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none;
+}
+
+    .logout-btn a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        color: white;
+        text-decoration: none;
+    }
+
+    .logout-btn:hover {
+        background-color: #c0392b;
+    }
+
+.nav-bar.collapsed .logout-btn span {
+    display: none;
+}
+
+.header {
+    background-color: #34495e;
+    border-bottom: 1px solid #ddd;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 60px;
+}
+
+    .header h1 {
+        color: #ecf0f1;
+    }
+
+#toggleButton {
+    color: white;
+}
+
+/* Thiết lập kiểu cho bảng */
+.table {
+    font-size: 14px;
+    border-collapse: collapse;
+    width: 100%; /* Chiếm toàn bộ chiều rộng của khung */
+}
+
+    /* Thiết lập đường viền cho bảng */
+    .table th, .table td {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid #dee2e6; /* Đường viền cho các ô */
+    }
+
+    /* Màu nền cho tiêu đề bảng */
+    .table th {
+        background-color: #f39c12; /* Cam dịu cho tiêu đề */
+        color: white;
+        transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu khi hover */
+    }
+
+        .table th:hover {
+            background-color: #e67e22; /* Màu cam đậm hơn khi hover */
+        }
+
+    /* Tạo màu nền cho các ô dữ liệu */
+    .table td {
+        background-color: #f8f9fa;
+        transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền */
+    }
+
+    /* Hiệu ứng khi hover qua hàng dữ liệu */
+    .table tr:hover {
+        background-color: #f5e1a4; /* Nền sáng hơn khi hover qua hàng */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ nhẹ giúp nổi bật */
+    }
+
+/* Giữ cho các ô dài không bị cắt */
+.nowrap {
+    white-space: nowrap; /* Ngừng xuống dòng */
+    overflow-x: auto; /* Cho phép cuộn ngang khi nội dung dài */
+    max-width: 150px; /* Giới hạn chiều rộng của ô */
+}
+
+
+/* Điều chỉnh các nút bấm */
+.btn {
+    margin: 5px 0;
+}
+
+/* Màu sắc và kiểu dáng cho các nút */
+.btn-update, .btn-delete {
+    font-size: 25px; /* Kích thước biểu tượng hợp lý */
+    padding: 10px 14px; /* Tăng không gian giữa các cạnh */
+    text-transform: none; /* Không chuyển đổi chữ thành chữ hoa */
+    border-radius: 20px; /* Góc bo tròn giúp mềm mại hơn */
+    transition: all 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Nút Cập nhật (Xanh pastel) */
+.btn-update {
+    background-color: #5bc0de; /* Xanh pastel nhẹ nhàng */
+    border-color: #5bc0de;
+    color: white;
+}
+
+    .btn-update:hover {
+        background-color: #46b3d6; /* Màu tối hơn khi hover */
+        border-color: #46b3d6;
+        transform: translateY(-2px); /* Nâng nút lên nhẹ nhàng */
+    }
+
+/* Nút Xóa (Đỏ pastel nhẹ) */
+.btn-delete {
+    background-color: #f28c8c; /* Đỏ pastel nhẹ nhàng */
+    border-color: #f28c8c;
+    color: white;
+}
+
+    .btn-delete:hover {
+        background-color: #f15b5b; /* Đỏ đậm hơn khi hover */
+        border-color: #f15b5b;
+        transform: translateY(-2px); /* Nâng nút lên nhẹ nhàng */
+    }
+
+    /* Thêm hiệu ứng bóng đổ nhẹ khi hover */
+    .btn-update:hover, .btn-delete:hover {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ giúp nút nổi bật */
+    }
+
+/* Nút Thêm mới */
+.card-tools .btn-success {
+    font-size: 16px;
+    padding: 10px 20px; /* Padding đủ để nút không bị dính bảng */
+    border-radius: 6px;
+    border: 1px solid #28a745; /* Viền màu xanh lá */
+    background-color: #ffffff; /* Nền trắng nhẹ nhàng */
+    color: #28a745; /* Màu chữ xanh lá */
+    text-transform: none; /* Không chuyển đổi chữ thành hoa */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ để nút nổi bật */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    /* Khi hover, nút không thay đổi màu nền mà chỉ thay đổi bóng đổ */
+    .card-tools .btn-success:hover {
+        background-color: #f1f1f1; /* Nền sáng nhẹ khi hover */
+        transform: translateY(-2px); /* Nâng nút lên nhẹ nhàng */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Tăng bóng đổ khi hover */
+    }
+
+/* Thêm padding trên và dưới cho khoảng cách với bảng */
+.card-tools {
+    padding-top: 10px; /* Padding trên để nút không bị dính vào tiêu đề */
+    padding-bottom: 10px; /* Padding dưới để tạo khoảng cách với bảng */
+}
+
+/* Nổi bật tiêu đề "Quản Lý Hành Khách" */
+.card-header h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-transform: uppercase; /* Viết hoa tiêu đề */
+    letter-spacing: 1px; /* Khoảng cách giữa các chữ */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+    .card-header h3:hover {
+        color: #f39c12; /* Màu cam nổi bật khi hover */
+        transform: translateY(-2px); /* Nâng tiêu đề lên nhẹ nhàng */
+    }
+#manageDropdown a {
+    text-decoration: none; /* Loại bỏ underline */
+    color: inherit; /* Giữ nguyên màu sắc của văn bản */
+}
+
+    #manageDropdown a:hover {
+        text-decoration: none; /* Tùy chọn: thêm underline khi hover */
+    }
+
+/* Loại bỏ underline cho tất cả các liên kết trong sidebar */
+.nav-bar a {
+    text-decoration: none; /* Loại bỏ underline */
+    color: inherit; /* Giữ nguyên màu sắc của văn bản */
+}
+
+    /* Đảm bảo không có underline khi hover */
+    .nav-bar a:hover {
+        text-decoration: none; /* Không có underline khi hover */
+    }
+
+.custom-header {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007bff; /* Màu xanh dương nổi bật */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Tạo bóng đổ nhẹ */
+}

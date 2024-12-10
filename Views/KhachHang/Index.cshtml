@@ -1,0 +1,372 @@
+﻿@using QLBVXK.Models
+@model List<QLBVXK.Models.ChiTietVeView>
+
+@{
+    ViewData["Title"] = "Trang cá nhân";
+    Layout = "~/Views/Shared/_Layouthome.cshtml";
+}
+
+<html>
+<head>
+    <title>HUITPAY</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+
+        .sidebar {
+            width: 250px;
+            background: linear-gradient(180deg, #fff, #f1f1f1);
+            padding: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .menu-item-ve {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 8px;
+            margin: 8px 16px;
+            transition: all 0.3s ease;
+        }
+
+            .menu-item-ve i {
+                margin-right: 12px;
+                font-size: 22px;
+                color: linear-gradient(90deg, #0056b3, #003f7f);
+                transition: transform 0.3s ease, color 0.3s ease;
+            }
+
+            .menu-item-ve:hover {
+                background: linear-gradient(90deg, #ff7f3e, #ff5722);
+                color: #fff;
+                box-shadow: 0 4px 8px rgba(255, 87, 34, 0.2);
+            }
+
+                .menu-item-ve:hover i {
+                    transform: rotate(15deg) scale(1.3); /* Phóng to và xoay nhẹ icon */
+                    color: #fff;
+                }
+
+            .menu-item-ve.active {
+                background: linear-gradient(90deg, #0056b3, #003f7f);
+                color: #fff;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+                .menu-item-ve.active i {
+                    color: #fff;
+                }
+
+            .menu-item-ve:active {
+                transform: scale(0.98); /* Hiệu ứng nhấn xuống */
+            }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <a class="menu-item-ve active" href="#" onclick="showContent(event,'wallet-balance')">
+                <i class="fas fa-wallet"></i>
+                HUIT PAY
+            </a>
+            <a class="menu-item-ve" href="#" onclick="showContent(event,'account-info')">
+                <i class="fas fa-user"></i>
+                Thông tin tài khoản
+            </a>
+            <a class="menu-item-ve" href="#" onclick="showContent(event,'ticket-history')">
+                <i class="fas fa-history"></i>
+                Lịch sử mua vé
+            </a>
+            <a class="menu-item-ve" href="#" onclick="showContent(event,'reset-password')">
+                <i class="fas fa-key"></i>
+                Đặt lại mật khẩu
+            </a>
+            <a class="menu-item-ve" href="@Url.Action("Logout", "Auth")">
+                <i class="fas fa-sign-out-alt"></i>
+                Đăng xuất
+            </a>
+        </div>
+        <div class="content">
+            <div id="wallet-balance" class="content-section">
+                <div class="image-container">
+                    <img src="~/IMG/My_Gallery.png" alt="Wallet Image" style="width: 300px; height: 370px;" />
+                </div>
+            </div>
+
+            <div id="account-info" class="content-section" style="display: none;">
+                <h2>Cập nhật thông tin cá nhân</h2>
+
+                <!-- Hiển thị thông báo nếu có thông tin từ TempData -->
+                @if (TempData["Message"] != null)
+                {
+                    <div class="alert">
+                        @Html.Raw(TempData["Message"].ToString())
+                    </div>
+                }
+
+                <!-- Form Cập Nhật Thông Tin Cá Nhân -->
+                @using (Html.BeginForm("UpdateProfile", "KhachHang", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken() 
+
+                    <div class="form-group">
+                        <label for="TenHanhKhach">Họ và tên</label>
+                        <input type="text" id="TenHanhKhach" name="TenHanhKhach" value="@Session["TenHanhKhach"]" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="SoDienThoai">Số điện thoại</label>
+                        <input type="text" id="SoDienThoai" name="SoDienThoai" value="@Session["SoDienThoai"]" disabled />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="GioiTinh">Giới tính</label>
+                        <select name="GioiTinh" id="GioiTinh">
+                            @if ((string)Session["GioiTinh"] == "Nam")
+                            {
+                                <option value="Nam" selected>Nam</option>
+                                <option value="Nữ">Nữ</option>
+                            }
+                            else if ((string)Session["GioiTinh"] == "Nữ")
+                            {
+                                <option value="Nam">Nam</option>
+                                <option value="Nữ" selected>Nữ</option>
+                            }
+                            else
+                            {
+                                <option value="Nam">Nam</option>
+                                <option value="Nữ">Nữ</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="email" id="Email" name="Email" value="@Session["Email"]" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="DiaChi">Địa chỉ</label>
+                        <input type="text" id="DiaChi" name="DiaChi" value="@Session["DiaChi"]" required />
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="confirm-btn">Cập nhật thông tin</button>
+                    </div>
+                }
+            </div>
+
+            <div id="ticket-history" class="content-section">
+                <div class="ticket-history">
+                    <h2>Lịch sử mua vé</h2>
+
+                    <!-- Form lọc vé -->
+                    <form method="get" action="@Url.Action("Index", "KhachHang")">
+                        <div class="filter-section">
+                            <div class="filter-group">
+                                <label for="ticket-id">Mã vé</label>
+                                <input type="text" id="ticket-id" name="MaVeXe" value="@ViewBag.MaVeXe" placeholder="Nhập Mã vé">
+                            </div>
+
+                            <div class="filter-group">
+                                <label for="date-select">Thời gian</label>
+                                <input type="date" id="date-select" name="NgayKhoiHanh" value="@ViewBag.NgayKhoiHanh">
+                            </div>
+
+                            <div class="filter-group">
+                                <label for="DiemDi">Nơi xuất phát</label>
+                                <select id="DiemDi" name="DiemDi" class="form-select">
+                                    <option value="">Chọn nơi xuất phát</option>
+                                    @foreach (var item in ViewBag.TinhThanhList)
+                                    {
+                                        <option value="@item.Value" @(item.Value == ViewBag.DiemDi ? "selected" : "")>@item.Text</option>
+                                    }
+                                </select>
+                            </div>
+
+                            <div class="filter-group">
+                                <label for="DiemDen">Nơi đến</label>
+                                <select id="DiemDen" name="DiemDen" class="form-select">
+                                    <option value="">Chọn nơi đến</option>
+                                    @foreach (var item in ViewBag.TinhThanhList)
+                                    {
+                                        <option value="@item.Value" @(item.Value == ViewBag.DiemDen ? "selected" : "")>@item.Text</option>
+                                    }
+                                </select>
+                            </div>
+
+                            <div class="filter-group">
+                                <label for="status">Trạng thái</label>
+                                <select id="status" name="TrangThai">
+                                    <option value="">Chọn trạng thái</option>
+                                    <option value="Còn hạn" @(ViewBag.TrangThai == "Còn hạn" ? "selected" : "")>Còn hạn</option>
+                                    <option value="Hết hạn" @(ViewBag.TrangThai == "Hết hạn" ? "selected" : "")>Hết hạn</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <button type="submit" class="search-button">Tìm kiếm</button>
+                        </div>
+                    </form>
+
+                    <!-- Hiển thị kết quả vé -->
+                    <table class="ticket-table">
+                        <thead>
+                            <tr>
+                                <th>Mã vé</th>
+                                <th>Vị trí ghế</th>
+                                <th>Tuyến Xe</th>
+                                <th>Tuyến đường</th>
+                                <th>Ngày đi</th>
+                                <th>Ngày đến</th>
+                                <th>Số tiền</th>
+                                <th>Trạng thái</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null && Model.Count > 0)
+                            {
+                                foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.MaVeXe</td>
+                                        <td>@item.ViTriGhe</td>
+                                        <td>@item.TenTuyenXe</td>
+                                        <td>@item.DiemDi - @item.DiemDen</td>
+                                        <td>@item.NgayKhoiHanh.ToString("yyyy-MM-dd")</td>
+                                        <td>@item.NgayDenDuKien.ToString("yyyy-MM-dd")</td>
+                                        <td>@item.GiaTien.ToString("C")</td>
+                                        <td>@item.TrangThai</td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="8" style="text-align: center;">Không có dữ liệu</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="reset-password" class="content-section" style="display: none;">
+                <h2>Đổi mật khẩu</h2>
+                <br />
+
+                @if (TempData["Message"] != null)
+                {
+                    <script type="text/javascript">
+            var message = '@Html.Raw(TempData["Message"].ToString())';
+            alert(message);
+                    </script>
+                }
+
+                <!-- Form Đổi Mật Khẩu -->
+                <form id="change-password-form" method="post" action="/KhachHang/DoiMatKhau">
+                    <div class="form-group">
+                        <label for="old-password">Mật khẩu cũ</label>
+                        <input type="password" id="old-password" name="matKhauCu" placeholder="Nhập mật khẩu cũ" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">Mật khẩu mới</label>
+                        <input type="password" id="new-password" name="matKhauMoi" placeholder="Nhập mật khẩu mới" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-new-password">Xác nhận mật khẩu mới</label>
+                        <input type="password" id="confirm-new-password" name="xacNhanMatKhauMoi" placeholder="Xác nhận mật khẩu mới" required />
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="confirm-btn">Xác nhận</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="overlay" style="display: none;"></div>
+            <div class="logout-form" id="logout-form" style="display: none;">
+                <div class="form-content">
+                    <h2>Bạn có muốn đăng xuất?</h2>
+                    <div class="form-actions">
+                        <button class="cancel-btn" onclick="hideLogoutForm()">Hủy</button>
+                        <button class="confirm-btn">Xác nhận</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function showContent(event, sectionId) {
+            // Ẩn tất cả các phần tử content-section
+            var sections = document.getElementsByClassName('content-section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+
+            // Hiển thị phần tử có ID tương ứng
+            document.getElementById(sectionId).style.display = 'block';
+
+            // Đánh dấu mục menu hiện tại là active
+            var menuItems = document.getElementsByClassName('menu-item');
+            for (var i = 0; i < menuItems.length; i++) {
+                menuItems[i].classList.remove('active');
+            }
+            event.currentTarget.classList.add('active');
+
+            // Cập nhật URL mà không tải lại trang
+            window.history.pushState(null, '', '#' + sectionId);
+        }
+
+        function hideAddAddressForm() {
+            document.getElementById('add-address-form').style.display = 'none';
+        }
+
+        // Lưu địa chỉ mới (bạn có thể thêm logic lưu trữ vào đây)
+        function saveAddress() {
+            // Lấy giá trị từ các input
+            var address = document.getElementById('address').value;
+            var city = document.getElementById('city').value;
+            var zipcode = document.getElementById('zipcode').value;
+
+            // Kiểm tra giá trị đã nhập
+            if (address && city && zipcode) {
+                alert("Địa chỉ mới đã được lưu: " + address + ", " + city + ", " + zipcode);
+                hideAddAddressForm(); // Ẩn form sau khi lưu
+            } else {
+                alert("Vui lòng điền đầy đủ thông tin địa chỉ.");
+            }
+        }
+
+        // Xử lý khi tải trang
+        window.onload = function () {
+            var activeMenu = localStorage.getItem('activeMenu');
+            if (activeMenu) {
+                showContent(null, activeMenu);  // Hiển thị mục đã lưu, không có event
+            } else {
+                // Nếu không có mục nào được lưu, mặc định sẽ chọn "wallet-balance"
+                showContent(null, 'wallet-balance');
+            }
+        };
+
+        // Hiển thị form đăng xuất
+        function showLogoutForm() {
+            localStorage.removeItem('activeMenu');  // Xóa trạng thái lưu khi đăng xuất
+            document.getElementById('logout-form').style.display = 'flex';
+        }
+
+        // Ẩn form đăng xuất
+        function hideLogoutForm() {
+            document.getElementById('logout-form').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+﻿@using QLBVXK.Models
+
+@{
+    ViewData["Title"] = "Lịch Trình";
+    Layout = "~/Views/Shared/_Layouthome.cshtml";
+}
+
+<section style="background-color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; max-width: 1000px; margin: 20px auto;">
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h2 style="font-size: 24px; font-weight: bold; color: #f39c12;">Đặt Vé Xe Khách</h2>
+    </div>
+    <form method="get" action="@Url.Action("LichTrinh", "Home")" style="display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 10px;" novalidate>
+        <div style="flex: 1; min-width: 180px;">
+            <label for="DiemDi" style="font-weight: 600; color: #333;">Nơi xuất phát</label>
+            <select id="DiemDi" name="DiemDi" class="form-select hover-highlight" style="width: 100%; padding: 8px; border: 2px solid #ccc; border-radius: 5px;" required>
+                <option value="">Chọn nơi xuất phát</option>
+                @foreach (var item in ViewBag.TinhThanhList)
+                {
+                    <option value="@item.Text" @(item.Text == ViewBag.diemdi ? "selected" : "")>@item.Text</option>
+                }
+            </select>
+        </div>
+        <!-- tráo đổi tỉnh thành-->
+        <div style="flex: 0 0 auto;">
+            <button type="button" onclick="swapLocations()" style="background-color: #3498db; color: #fff; border: none; padding: 8px 15px; font-size: 16px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">
+                <i class="fas fa-exchange-alt"></i>
+            </button>
+        </div>
+        <div style="flex: 1; min-width: 180px;">
+            <label for="DiemDen" style="font-weight: 600; color: #333;">Nơi đến</label>
+            <select id="DiemDen" name="DiemDen" class="form-select hover-highlight" style="width: 100%; padding: 8px; border: 2px solid #ccc; border-radius: 5px;" required>
+                <option value="">Chọn nơi đến</option>
+                @foreach (var item in ViewBag.TinhThanhList)
+                {
+                    <option value="@item.Text" @(item.Text == ViewBag.diemden ? "selected" : "")>@item.Text</option>
+                }
+            </select>
+        </div>
+
+        <div style="flex: 1; min-width: 180px;">
+            <label for="NgayDi" style="font-weight: 600; color: #333;">Ngày đi</label>
+            <input type="date" id="NgayDi" name="NgayDi" class="form-control hover-highlight" style="width: 100%; padding: 8px; border: 2px solid #ccc; border-radius: 5px;" required value="@ViewBag.ngaydi?.ToString(" yyyy-MM-dd")">
+        </div>
+
+        <div style="flex: 0 0 auto;">
+            <button type="submit" style="background-color: #ffc107; color: #fff; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">
+                Tìm kiếm
+            </button>
+        </div>
+    </form>
+</section>
+
+<section>
+    <div class="container">
+        <h3>Thông tin tìm kiếm</h3>
+        <p>
+            <strong>Nơi xuất phát:</strong> @(ViewBag.diemdi ?? "Chưa chọn")
+        </p>
+        <p><strong>Nơi đến:</strong> @(ViewBag.diemden ?? "Chưa chọn")</p>
+        <p><strong>Ngày đi:</strong> @(ViewBag.ngaydi?.ToString("yyyy-MM-dd") ?? "Chưa chọn")</p>
+    </div>
+</section>
+
+<!-- Kiểm tra nếu người dùng đã đăng nhập -->
+@if (Session["Username"] == null)
+{
+    <section style="background-color: #ffdddd; padding: 15px; margin: 20px 0; text-align: center;">
+        <strong style="color: red;">Bạn cần đăng nhập để chọn chuyến.</strong>
+        <br />
+        <a href="@Url.Action("Login", "Auth")" style="color: #3498db;">Đăng nhập ngay</a>
+    </section>
+}
+
+<section>
+    <div class="container">
+        @*<aside class="filter-section">
+            <h3>BỘ LỌC TÌM KIẾM</h3>
+            <button class="reset-filter">Bỏ lọc</button>
+
+            <div class="filter-group">
+                <h4>Giờ đi</h4>
+                <label><input type="checkbox"> Sáng sớm 00:00 - 06:00 (4)</label>
+                <label><input type="checkbox"> Buổi sáng 06:00 - 12:00 (17)</label>
+                <label><input type="checkbox"> Buổi chiều 12:00 - 18:00 (7)</label>
+                <label><input type="checkbox"> Buổi tối 18:00 - 24:00 (25)</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Loại xe</h4>
+                <button>Ghế</button>
+                <button>Giường</button>
+                <button>Limousine</button>
+            </div>
+
+            <div class="filter-group">
+                <h4>Hàng ghế</h4>
+                <button>Hàng đầu</button>
+                <button>Hàng giữa</button>
+                <button>Hàng cuối</button>
+            </div>
+
+            <div class="filter-group">
+                <h4>Tầng</h4>
+                <button>Tầng trên</button>
+                <button>Tầng dưới</button>
+            </div>
+        </aside>*@
+        <main class="booking-section">
+            <div class="header">
+                <h2>Lịch Trình Xe</h2>
+            </div>
+
+            @if (Model != null && Model.Count > 0)
+            {
+                <div class="trip-list">
+                    @foreach (var item in Model)
+                    {
+                        <div class="trip-item">
+                            <div class="time-info">
+                                <p>
+                                    <strong>Ngày khởi hành:</strong> @item.NgayKhoiHanh.ToString("dd/MM/yyyy")
+                                </p>
+                                <p>
+                                    <strong>@item.GioKhoiHanh.ToString("hh\\:mm")</strong> - @item.GioDenDuKien.ToString("hh\\:mm")
+                                </p>
+                            </div>
+                            <div class="trip-details">
+                                <p><strong>Tuyến xe:</strong> @item.TenTuyenXe</p>
+                                <p><strong>Biển số xe:</strong> @item.BienSoXe</p>
+                                <p><strong>Điểm đi:</strong> @item.DiemDi</p>
+                                <p><strong>Điểm đến:</strong> @item.DiemDen</p>
+                                <p><span>@item.TenLoaiXe</span> • @item.SoGheTrong chỗ trống</p>
+                                <p><strong>@string.Format("{0:n0}", item.GiaTien) VND</strong></p>
+                            </div>
+                            @if (Session["Userid"] == null)
+                            {
+                                <a class="select-button" href="@Url.Action("Login", "Auth")">Chọn chuyến</a>
+                            }
+                            else
+                            {
+                                <a class="select-button" href="@Url.Action("Index", "Ve", new { MaChuyenXe = item.MaChuyenXe.Trim() })">Chọn chuyến</a>
+                            }
+                        </div>
+                    }
+                </div>
+
+                <!-- Phân trang -->
+                <div class="pagination">
+                    @if (ViewBag.CurrentPage > 1)
+                    {
+                        <a href="@Url.Action("LichTrinh", new { DiemDi = ViewBag.diemdi, DiemDen = ViewBag.diemden, NgayDi = ViewBag.ngaydi, page = ViewBag.CurrentPage - 1, pageSize = ViewBag.PageSize })">&laquo; Trước</a>
+                    }
+
+                    @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                    {
+                        <a href="@Url.Action("LichTrinh", new { DiemDi = ViewBag.diemdi, DiemDen = ViewBag.diemden, NgayDi = ViewBag.ngaydi, page = i, pageSize = ViewBag.PageSize })" class="@(i == ViewBag.CurrentPage ? "active" : "")">@i</a>
+                    }
+
+                    @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+                    {
+                        <a href="@Url.Action("LichTrinh", new { DiemDi = ViewBag.diemdi, DiemDen = ViewBag.diemden, NgayDi = ViewBag.ngaydi, page = ViewBag.CurrentPage + 1, pageSize = ViewBag.PageSize })">Sau &raquo;</a>
+                    }
+                </div>
+
+            }
+            else
+            {
+                <p>Không tìm thấy chuyến xe nào phù hợp với tiêu chí tìm kiếm.</p>
+            }
+        </main>
+    </div>
+</section>
+
+<style>
+    /* Hiệu ứng hover cho các hộp chọn và input */
+    .hover-highlight:hover {
+        border-color: #f39c12;
+        box-shadow: 0 0 5px rgba(243, 156, 18, 0.5);
+    }
+
+    /* Hiệu ứng hover cho nút tìm kiếm */
+    button[type="submit"]:hover {
+        background-color: #e0a800;
+    }
+
+    /* Tô màu tiêu đề */
+    h2 {
+        color: #f39c12;
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+        .pagination a {
+            padding: 8px 16px;
+            margin: 0 4px;
+            text-decoration: none;
+            color: #007bff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+            .pagination a.active {
+                background-color: #f39c12;
+                color: white;
+            }
+
+            .pagination a:hover {
+                background-color: #ddd;
+            }
+</style>
+<script>
+    function swapLocations() {
+        var diemDiSelect = document.getElementById("DiemDi");
+        var diemDenSelect = document.getElementById("DiemDen");
+
+        var diemDiValue = diemDiSelect.value;
+        var diemDenValue = diemDenSelect.value;
+
+        // Trao đổi giá trị giữa hai select box
+        diemDiSelect.value = diemDenValue;
+        diemDenSelect.value = diemDiValue;
+    }
+</script>

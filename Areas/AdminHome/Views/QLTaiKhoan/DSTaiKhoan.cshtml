@@ -1,0 +1,98 @@
+﻿@using QLBVXK.Models
+@model List<TAIKHOAN>
+
+@{
+    ViewBag.Title = "Danh sách tài khoản";
+    Layout = "~/Areas/AdminHome/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content">
+    <div class="card">
+        <div class="card-body">
+            <!-- Hiển thị thông báo thành công hoặc lỗi -->
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success">
+                    @TempData["SuccessMessage"]
+                </div>
+            }
+            @if (TempData["ErrorMessages"] != null)
+            {
+                <div class="alert alert-danger">
+                    @TempData["ErrorMessages"]
+                </div>
+            }
+
+            @if (Model != null && Model.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>STT</th>
+                                <th>User ID</th>
+                                <th>Số điện thoại</th>
+                                <th>Mật khẩu</th>
+                                <th>Vai trò</th>
+                                <th class="text-center">Tác vụ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.Count; i++)
+                            {
+                                var item = Model[i];
+                                <tr id="trow@item.UserID">
+                                    <td>@(i + 1)</td>
+                                    <td>@item.UserID</td>
+                                    <td>@item.UserName</td>
+                                    <td>@item.Pass</td>
+                                    <td>@item.UserRole</td>
+                                    <td class="text-center">
+                                        <a href="@Url.Action("SuaTK", "QLTaiKhoan", new { id = item.UserID.Trim() })" class="btn btn-warning btn-sm btn-action">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="@Url.Action("XoaTK", "QLTaiKhoan", new { id = item.UserID.Trim() })" class="btn btn-danger btn-sm btn-action"
+                                           onclick="return confirm('Bạn có chắc chắn muốn xóa?');">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <p>Không có tài khoản nào.</p>
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Hiệu ứng phân trang */
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+        .pagination a {
+            padding: 8px 16px;
+            margin: 0 4px;
+            text-decoration: none;
+            color: #007bff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+            .pagination a.active {
+                background-color: #f39c12;
+                color: white;
+            }
+
+            .pagination a:hover {
+                background-color: #ddd;
+            }
+</style>

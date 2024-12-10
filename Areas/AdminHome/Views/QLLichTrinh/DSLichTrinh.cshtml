@@ -1,0 +1,166 @@
+﻿@using QLBVXK.Models
+@model List<CHUYENXE>
+
+@{
+    ViewBag.Title = "Danh sách chuyến xe";
+    Layout = "~/Areas/AdminHome/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Quản Lý Chuyến Xe</h3>
+            <div class="card-tools">
+                @Html.ActionLink("Thêm mới", "ThemLT", "QLLichTrinh", null, new { @class = "btn btn-success" })
+            </div>
+        </div>
+
+        <div class="card-body">
+            <!-- Hiển thị thông báo thành công hoặc lỗi -->
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success">
+                    @TempData["SuccessMessage"]
+                </div>
+            }
+            @if (TempData["ErrorMessages"] != null)
+            {
+                <div class="alert alert-danger">
+                    @TempData["ErrorMessages"]
+                </div>
+            }
+
+            @if (Model != null && Model.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>STT</th>
+                                <th>Mã Chuyến Xe</th>
+                                <th>Tuyến Xe</th>
+                                <th>Xe</th>
+                                <th>Giá Tiền</th>
+                                <th>Số Ghế Trống</th>
+                                <th>Ngày Khởi Hành</th>
+                                <th>Giờ Dự Kiến</th>
+                                <th class="text-center">Tác vụ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.Count; i++)
+                            {
+                                var item = Model[i];
+                                <tr id="trow@item.MaChuyenXe">
+                                    <td>@(i + 1)</td>
+                                    <td>@item.MaChuyenXe</td>
+                                    <td>@item.MaTuyenXe</td>
+                                    <td>@item.MaXe</td>
+                                    <td>@item.GiaTien.ToString("N0")</td>
+                                    <td>@item.SoGheTrong</td>
+
+                                    <td>
+                                        @if (item.NgayKhoiHanh.HasValue)
+                                        {
+                                            @item.NgayKhoiHanh.Value.ToString("dd/MM/yyyy")
+                                        }
+                                        else
+                                        {
+                                            @:N/A
+                                        }
+                                        -
+                                        @if (item.NgayDenDuKien.HasValue)
+                                        {
+                                            @item.NgayDenDuKien.Value.ToString("dd/MM/yyyy")
+                                        }
+                                        else
+                                        {
+                                            @:N/A
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (item.GioKhoiHanh.HasValue)
+                                        {
+                                            @item.GioKhoiHanh.Value.ToString(@"hh\:mm")
+                                        }
+                                        else
+                                        {
+                                            @:N/A
+                                        }
+                                        -
+                                        @if (item.GioDenDuKien.HasValue)
+                                        {
+                                            @item.GioDenDuKien.Value.ToString(@"hh\:mm")
+                                        }
+                                        else
+                                        {
+                                            @:N/A
+                                        }
+                                    </td>
+
+                                    <td class="text-center">
+                                        <a href="@Url.Action("SuaLT", "QLLichTrinh", new { id = item.MaChuyenXe.Trim() })" class="btn btn-warning btn-sm btn-action">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="@Url.Action("XoaLT", "QLLichTrinh", new { id = item.MaChuyenXe.Trim() })" class="btn btn-danger btn-sm btn-action" onclick="return confirm('Bạn có chắc chắn muốn xóa chuyến xe này?');">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Phân trang -->
+                <div class="pagination">
+                    @if (ViewBag.CurrentPage > 1)
+                    {
+                        <a href="@Url.Action("DSLichTrinh", new { page = ViewBag.CurrentPage - 1, pageSize = ViewBag.PageSize })">&laquo; Trước</a>
+                    }
+
+                    @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                    {
+                        <a href="@Url.Action("DSLichTrinh", new { page = i, pageSize = ViewBag.PageSize })" class="@(i == ViewBag.CurrentPage ? "active" : "")">@i</a>
+                    }
+
+                    @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+                    {
+                        <a href="@Url.Action("DSLichTrinh", new { page = ViewBag.CurrentPage + 1, pageSize = ViewBag.PageSize })">Sau &raquo;</a>
+                    }
+                </div>
+            }
+            else
+            {
+                <p>Không có chuyến xe nào.</p>
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Hiệu ứng hover cho các hộp chọn và input */
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+        .pagination a {
+            padding: 8px 16px;
+            margin: 0 4px;
+            text-decoration: none;
+            color: #007bff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+            .pagination a.active {
+                background-color: #f39c12;
+                color: white;
+            }
+
+            .pagination a:hover {
+                background-color: #ddd;
+            }
+</style>

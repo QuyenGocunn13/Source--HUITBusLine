@@ -1,0 +1,227 @@
+﻿@using QLBVXK.Models
+@model BookingInfo
+
+@{
+    ViewBag.Title = "Xác nhận thanh toán";
+    Layout = "~/Views/Shared/_Layouthome.cshtml";
+}
+
+
+<h2 class="text-center mb-4 fw-bold text-gradient">Xác nhận thông tin đặt vé</h2>
+<div class="container mt-5">
+    <!-- Tiêu đề -->
+    @if (Model != null)
+    {
+        <!-- Thông tin khách hàng và chuyến đi (Cập nhật thành 2 cột) -->
+        <div class="row">
+            <!-- Thông tin khách hàng -->
+            <div class="col-md-6">
+                <div class="form-container border p-4 rounded shadow">
+                    <h4 class="form-header text-secondary mb-3">Thông tin khách hàng</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label for="fullname" class="form-label">Họ và tên <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="HoVaTen" name="fullname"
+                                   value="@Model.HoVaTen" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Số điện thoại <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="SoDienThoai" name="phone"
+                                   value="@Model.SoDienThoai" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="Email" name="email"
+                                   value="@Model.Email" readonly>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Thông tin chuyến đi -->
+            <div class="col-md-6">
+                <div class="form-container mt-4 border p-4 rounded shadow">
+                    <h4 class="form-header text-secondary mb-3">Thông tin chuyến xe</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label for="MaChuyenXe" class="form-label">Mã chuyến xe <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="MaChuyenXe" name="MaChuyenXe"
+                                   value="@Model.MaChuyenXe" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="SoLuongGhe" class="form-label">Số lượng ghế <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="SoLuongGhe" name="SoLuongGhe"
+                                   value="@Model.SoLuongGhe" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ViTriGhe" class="form-label">Vị trí ghế <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="ViTriGhe" name="ViTriGhe"
+                                   value="@string.Join(", ", Model.ViTriGhe)" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="TongTien" class="form-label">Tổng tiền <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="TongTien" name="TongTien"
+                                   value="@Model.TongTien.ToString("C0", System.Globalization.CultureInfo.CurrentCulture)" readonly>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup ẩn cho ảnh -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="hidePopup()">&times;</span>
+                <img src="~/IMG/My_Gallery.png" alt="QR Thanh Toán" class="popup-image">
+            </div>
+        </div>
+
+        <!-- Nút hành động -->
+        <div class="text-center mt-4">
+            <a href="@Url.Action("ThanhToan", "Ve")" class="btn btn-success btn-lg mx-2 action-btn">Xác nhận thanh toán</a>
+            <button class="btn btn-primary btn-lg mx-2 action-btn" onclick="showPopup()">Chuyển khoản</button>
+            <a href="@Url.Action("LichTrinh", "Home")" class="btn btn-danger btn-lg mx-2 action-btn">Hủy</a>
+        </div>
+    }
+    else
+    {
+        <p class="text-danger text-center">Không có thông tin đặt vé để hiển thị.</p>
+    }
+</div>
+<!-- Styles -->
+<style>
+    /* Gradient text style for the title */
+    .text-gradient {
+        background: linear-gradient(to right, #6a11cb, #2575fc);
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 36px;
+        letter-spacing: 1px;
+    }
+
+    .form-container {
+        background-color: #f9f9f9;
+        border: 2px solid #ddd;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-header {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .qr-code {
+        max-width: 200px;
+    }
+
+    /* Popup styles */
+    .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+        .popup.show {
+            display: flex;
+            opacity: 1;
+        }
+
+    .popup-content {
+        position: relative;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .popup-image {
+        width: 300px;
+        height: 370px;
+        object-fit: cover;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        color: #333;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+        .close:hover {
+            color: #f00;
+        }
+
+    /* Button styles */
+    .action-btn {
+        transition: all 0.3s ease;
+        padding: 16px 32px;
+        font-size: 14px;
+        color: white;
+        border-radius: 5px;
+        text-transform: uppercase;
+    }
+
+    .btn-success:hover, .btn-danger:hover, .btn-primary:hover {
+        transform: scale(1.1);
+    }
+
+    .btn-success {
+        background-color: #28a745;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+    }
+
+    .btn-success:hover {
+        background-color: #218838;
+    }
+
+    .btn-danger:hover {
+        background-color: #c82333;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    .row {
+        display: flex;
+        align-items: center; /* Căn giữa theo chiều dọc */
+        gap: 20px;
+        width: 100%; /* Đảm bảo row chiếm toàn bộ chiều rộng */
+        height: 100%; /* Đảm bảo chiều cao đủ để căn giữa */
+        margin: 0 auto; /* Căn giữa trong container cha */
+        padding: 0; /* Loại bỏ padding mặc định */
+    }
+    .col-md-6 {
+        width: 48%; /* Đảm bảo mỗi cột chiếm 1 nửa chiều rộng */
+    }
+</style>
+
+<!-- Scripts -->
+<script>
+    function showPopup() {
+        document.getElementById('popup').classList.add('show');
+    }
+
+    function hidePopup() {
+        document.getElementById('popup').classList.remove('show');
+    }
+</script>

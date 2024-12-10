@@ -1,0 +1,645 @@
+﻿/* Nút Hủy */
+.cancel-btn {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .cancel-btn:hover {
+        background-color: #bbb;
+    }
+
+/* Nút Xác nhận */
+.confirm-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .confirm-btn:hover {
+        background-color: #0056b3;
+    }
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Cấu trúc container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+    .sidebar .menu-item {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        color: #333;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .sidebar .menu-item:hover {
+            background-color: #f1f1f1;
+        }
+
+        .sidebar .menu-item.active {
+            background-color: #ffece6;
+            border-radius: 5px;
+        }
+
+/* Nội dung chính */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Wallet Balance */
+.wallet-balance {
+    background-color: #fff7f5;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+    .wallet-balance .balance {
+        font-size: 36px;
+        color: #ff4500;
+    }
+
+    .wallet-balance .transaction-icon {
+        font-size: 40px;
+        color: #00aaff;
+    }
+
+/* Lịch sử giao dịch */
+.transaction-history {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+    .transaction-history h2 {
+        margin-top: 0;
+        font-size: 20px;
+        color: #007bff;
+    }
+
+    .transaction-history .filters {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+        .transaction-history .filters input,
+        .transaction-history .filters select,
+        .transaction-history .filters button {
+            margin-right: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .transaction-history .filters button {
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+    .transaction-history table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .transaction-history table th,
+        .transaction-history table td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+    .transaction-history .no-data {
+        text-align: center;
+        padding: 20px;
+        color: #999;
+    }
+
+        .transaction-history .no-data img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+/*================================================= Cập nhật thông tin tài khoản */
+#account-info {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 10px auto;
+    font-family: 'Arial', sans-serif;
+}
+
+    /* Tiêu đề form */
+    #account-info h2 {
+        font-size: 30px;
+        color: #e06b1f;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+/* Nhóm trường thông tin */
+.form-group {
+    display: flex;
+    justify-content: flex-start; /* Các phần tử trong .form-group sẽ căn theo chiều ngang từ trái qua phải */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+    /* Label của trường */
+    .form-group label {
+        font-size: 14px;
+        color: #333;
+        margin-right: 15px; /* Khoảng cách giữa label và input */
+        width: 150px; /* Cố định chiều rộng của label */
+        text-align: left; /* Căn trái cho label */
+    }
+
+    /* Các ô input và select */
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group select {
+        width: 100%; /* Các input và select chiếm phần còn lại */
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        /* Khi focus vào input */
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group select:focus {
+            border-color: #28a745;
+            box-shadow: 0 0 4px rgba(40, 167, 69, 0.2);
+            outline: none;
+        }
+
+/* Nút "Hủy" và "Cập nhật" */
+.form-actions {
+    display: flex;
+    justify-content: flex-start; /* Đưa nút về phía trái */
+    gap: 10px; /* Khoảng cách giữa các nút */
+    margin-top: 10px;
+    width: 100%; /* Đảm bảo các nút nằm đúng vị trí */
+}
+
+.cancel-btn,
+.confirm-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px; /* Giảm độ bo góc của nút */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Nút "Hủy" */
+.cancel-btn {
+    background-color: #ccc;
+    color: #333;
+}
+
+    .cancel-btn:hover {
+        background-color: #bbb;
+    }
+
+/* Nút "Cập nhật" */
+.confirm-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+    .confirm-btn:hover {
+        background-color: #218838;
+    }
+
+/* Thông báo lỗi */
+.alert {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+/*============================================ Đổi mật khẩu */
+/* Đổi mật khẩu */
+#reset-password {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 10px auto;
+    font-family: 'Arial', sans-serif;
+}
+
+    /* Tiêu đề form */
+    #reset-password h2 {
+        font-size: 30px;
+        color: #e06b1f;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+/* Nhóm trường thông tin */
+.form-group {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+    /* Label của trường */
+    .form-group label {
+        font-size: 14px;
+        color: #333;
+        margin-right: 15px; /* Khoảng cách giữa label và input */
+        width: 200px; /* Chiều rộng cố định cho label */
+        text-align: left;
+    }
+
+    /* Các ô input và select */
+    .form-group input[type="password"] {
+        width: 100%; /* Các input chiếm phần còn lại */
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        /* Khi focus vào input */
+        .form-group input[type="password"]:focus {
+            border-color: #28a745;
+            box-shadow: 0 0 4px rgba(40, 167, 69, 0.2);
+            outline: none;
+        }
+
+/* Nút "Hủy" và "Xác nhận" */
+.form-actions {
+    display: flex;
+    justify-content: flex-start; /* Căn trái */
+    gap: 10px; /* Khoảng cách giữa các nút */
+    margin-top: 10px;
+    width: 100%;
+}
+
+.cancel-btn,
+.confirm-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px; /* Giảm độ bo góc của nút */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Nút "Hủy" */
+.cancel-btn {
+    background-color: #ccc;
+    color: #333;
+}
+
+    .cancel-btn:hover {
+        background-color: #bbb;
+    }
+
+/* Nút "Xác nhận" */
+.confirm-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+    .confirm-btn:hover {
+        background-color: #218838;
+    }
+
+/* Thông báo lỗi */
+.alert {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+/* Ảnh đại diện */
+.profile-pic {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    .profile-pic img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+    }
+
+/* Nút upload */
+.upload-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border: none;
+    background-color: #e0e0e0;
+    color: #333;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Thông tin tệp */
+.file-info {
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+}
+
+/* Bảng thông tin */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+    .info-table td {
+        padding: 10px;
+        color: #333;
+    }
+
+        .info-table td.label {
+            width: 20%;
+            color: #888;
+            text-align: right;
+            padding-right: 10px;
+        }
+
+/*=================================================Lịch sử mua vé */
+#ticket-history {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px; /* Giảm chiều rộng tối đa */
+    margin: 10px auto;
+    font-family: 'Arial', sans-serif;
+    padding: 20px; /* Thêm padding để tạo không gian bên trong */
+}
+
+.ticket-history h2 {
+    font-size: 30px; /* Thu nhỏ kích thước chữ tiêu đề */
+    color: #e06b1f;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.filter-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px; /* Giảm khoảng cách giữa các ô */
+    margin-bottom: 16px; /* Giảm khoảng cách dưới */
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    .filter-section input[type="text"],
+    .filter-section input[type="date"],
+    .filter-section select,
+    .filter-section .search-button {
+        padding: 8px; /* Tăng padding để nút đẹp hơn */
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        box-sizing: border-box;
+        min-width: 130px;
+        font-size: 14px;
+        background-color: #ffffff;
+        transition: all 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+    }
+
+    .filter-section .search-button {
+        background-color: #4CAF50;
+        color: white;
+        font-size: 14px; /* Thu nhỏ kích thước chữ của nút tìm kiếm */
+        cursor: pointer;
+        margin-top: 8px; /* Giảm khoảng cách phía trên nút */
+    }
+
+        .filter-section .search-button:hover {
+            background-color: #45a049;
+        }
+
+/* Responsive - Màn hình nhỏ */
+@media (max-width: 600px) {
+    .filter-section {
+        grid-template-columns: 1fr; /* Xếp các ô theo cột trên màn hình nhỏ */
+    }
+}
+
+. /* Căn giữa phần tử chứa */
+.filter-group {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-top: 20px; /* Thêm khoảng cách phía trên nếu cần */
+}
+
+/* Nút tìm kiếm */
+.search-button {
+    background-color: #80C4E9; /* Màu xanh mint dịu mắt */
+    color: #000000; /* Màu chữ đen */
+    font-size: 18px; /* Kích thước chữ lớn hơn */
+    padding: 12px 36px; /* Tăng chiều cao và chiều rộng của nút */
+    border: none; /* Xóa bỏ viền mặc định */
+    border-radius: 50px; /* Bo tròn góc để tạo hình tròn hoặc bán nguyệt */
+    cursor: pointer;
+    font-weight: bold; /* Làm chữ đậm để nổi bật */
+    text-transform: uppercase; /* Chữ viết hoa để dễ nhận diện */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+    transition: all 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+    margin: 0 auto; /* Đảm bảo căn giữa */
+    display: block; /* Đảm bảo nút được hiển thị như một phần tử block */
+    letter-spacing: 2px; /* Thêm khoảng cách giữa các chữ */
+}
+
+    .search-button:hover {
+        background-color: #5ab29f; /* Màu xanh mint đậm khi hover */
+        transform: translateY(-4px); /* Đẩy nút lên khi hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bóng đổ đậm hơn khi hover */
+    }
+
+    .search-button:active {
+        background-color: #4a9d8e; /* Màu xanh mint tối khi nhấn */
+        transform: translateY(2px); /* Đẩy nút xuống khi nhấn */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Bóng đổ mạnh khi nhấn */
+    }
+
+    .search-button:focus {
+        outline: none; /* Xóa bỏ outline khi nhấn vào nút */
+        box-shadow: 0 0 8px rgba(102, 205, 170, 0.5); /* Thêm viền sáng cam khi nút được chọn */
+    }
+
+
+/* Bảng kết quả vé */
+.ticket-table {
+    width: 100%; /* Thu nhỏ bảng xuống 80% chiều rộng */
+    max-width: 900px; /* Giới hạn chiều rộng tối đa */
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px; /* Thu nhỏ kích thước chữ */
+}
+
+    .ticket-table th,
+    .ticket-table td {
+        padding: 8px; /* Thu nhỏ khoảng cách padding */
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .ticket-table th {
+        background-color: #f2f2f2;
+        color: #333;
+    }
+
+    .ticket-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .ticket-table tr:hover {
+        background-color: #f1f1f1;
+    }
+
+
+/* Đảm bảo độ rộng tối đa của bảng */
+@media (max-width: 768px) {
+    .filter-section {
+        grid-template-columns: 1fr; /* Hiển thị 1 cột trên màn hình nhỏ */
+    }
+
+    .ticket-table th, .ticket-table td {
+        font-size: 12px;
+    }
+}
+
+/* Form địa chỉ */
+#address-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+#address-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#address-form button {
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    #address-form button:hover {
+        background-color: #218838;
+    }
+
+/* Overlay làm mờ nền */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(79, 72, 72, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+/* Form đăng xuất */
+.logout-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+    .logout-form .form-content {
+        background: rgb(239, 184, 102);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .logout-form .form-actions button {
+        margin: 10px;
+    }

@@ -1,0 +1,98 @@
+﻿/* About Us Section */
+.about-us {
+    background-color: #f0f4f8; /* Màu nền nhẹ nhàng */
+    padding: 60px 20px; /* Padding cho section */
+    border-radius: 15px; /* Bo góc cho section */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ */
+}
+
+/* Tiêu đề chính */
+.header-title {
+    font-size: 48px; /* Kích thước tiêu đề chính */
+    font-weight: 700; /* Đậm */
+    color: #f39c12; /* Màu sắc */
+    margin-bottom: 10px; /* Khoảng cách dưới */
+}
+
+/* Phụ đề chính */
+.header-subtitle {
+    font-size: 24px; /* Kích thước phụ đề */
+    color: #2c7a7b; /* Màu sắc */
+    margin-bottom: 40px; /* Khoảng cách dưới */
+}
+
+/* Tiêu đề phụ */
+.section-title {
+    font-size: 28px; /* Kích thước tiêu đề phụ */
+    font-weight: 700; /* Đậm */
+    margin: 30px 0 10px; /* Khoảng cách trên, dưới và dưới */
+    color: #f39c12; /* Màu sắc */
+}
+
+/* Bố cục cho từng phần nội dung */
+.zigzag {
+    display: flex; /* Sử dụng flexbox */
+    justify-content: center; /* Căn giữa các phần */
+    margin-bottom: 40px; /* Khoảng cách giữa các phần */
+}
+
+/* Nội dung của từng phần */
+.section-content {
+    max-width: 400px; /* Giới hạn chiều rộng */
+    background-color: #fff; /* Màu nền trắng cho khung */
+    border-radius: 10px; /* Bo góc cho khung */
+    padding: 20px; /* Padding cho khung */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+    margin: 10px; /* Khoảng cách giữa các phần */
+}
+
+/* Hình ảnh trong phần nội dung */
+.section-image {
+    max-width: 100%; /* Chiều rộng tối đa là 100% */
+    height: auto; /* Giữ tỷ lệ */
+    border-radius: 10px; /* Bo góc hình ảnh */
+    margin: 10px 0; /* Khoảng cách giữa hình ảnh và văn bản */
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển động cho hình ảnh */
+}
+
+    .section-image:hover {
+        transform: scale(1.05); /* Phóng to hình ảnh khi di chuột */
+    }
+
+/* Mô tả cho từng phần */
+.section-description {
+    color: #555; /* Màu chữ */
+    font-size: 18px; /* Kích thước chữ */
+    line-height: 1.6; /* Tăng khoảng cách dòng cho dễ đọc */
+}
+
+/* Hiệu ứng ziczac cho từng phần */
+.left {
+    order: 1; /* Nội dung bên trái sẽ được đặt trước */
+}
+
+.right {
+    order: 2; /* Nội dung bên phải sẽ được đặt sau */
+}
+
+/* Thiết lập cho bố cục ziczac */
+.zigzag > .section-content {
+    flex: 1; /* Mỗi nội dung chiếm 1 phần */
+}
+
+/* Bố cục phụ cho các phần ziczac */
+.zigzag:nth-child(odd) .left {
+    order: 1; /* Đặt phần bên trái lên trước cho các phần lẻ */
+}
+
+.zigzag:nth-child(odd) .right {
+    order: 2; /* Đặt phần bên phải xuống dưới cho các phần lẻ */
+}
+
+.zigzag:nth-child(even) .right {
+    order: 1; /* Đặt phần bên phải lên trước cho các phần chẵn */
+}
+
+.zigzag:nth-child(even) .left {
+    order: 2; /* Đặt phần bên trái xuống dưới cho các phần chẵn */
+}

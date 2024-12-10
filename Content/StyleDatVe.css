@@ -1,0 +1,254 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.containerve {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .header h1 {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .header a {
+        color: #1a73e8;
+        text-decoration: none;
+    }
+
+.seats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+    .seats .level {
+        width: 45%;
+    }
+
+        .seats .level h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .seats .level .seat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .seats .level .seat {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #1a73e8;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            color: #1a73e8;
+            cursor: pointer;
+        }
+
+            .seats .level .seat.sold {
+                background-color: #d3d3d3;
+                color: #fff;
+                border-color: #d3d3d3;
+            }
+
+            .seats .level .seat.selected {
+                background-color: #ffebee;
+                color: #ff5252;
+                border-color: #ff5252;
+            }
+
+.legend {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.legend-box {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+.legend-sold {
+    background-color: #e0e0e0;
+}
+
+.legend-available {
+    background-color: #e3f2fd;
+    border: 1px solid #64b5f6;
+}
+
+.legend-selected {
+    background-color: #ffccbc;
+    border: 1px solid #e57373;
+}
+
+.form-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+    .form-header h6 {
+        font-weight: bold;
+    }
+
+    .form-header a {
+        text-decoration: none;
+        font-size: 14px;
+        color: #e57373;
+    }
+
+.form-label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.form-check-input {
+    margin-right: 10px;
+}
+
+.terms-link {
+    color: #e57373;
+    text-decoration: underline;
+}
+
+.policy {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #616161;
+}
+
+    .policy strong {
+        color: #e57373;
+    }
+
+
+.form-header h6 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.form-label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-select {
+    border-radius: 5px;
+}
+
+.text-danger {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.price-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-custom {
+    width: 120px;
+    border-radius: 20px;
+}
+
+.btn-cancel {
+    background-color: #fff;
+    color: #f05123;
+    border: 1px solid #f05123;
+}
+
+.btn-pay {
+    background-color: #f05123;
+    color: #fff;
+    border: none;
+}
+
+.info-box {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    min-height: 300px; /* Đảm bảo hộp bên phải đồng đều */
+}
+
+    .info-box h6 {
+        font-weight: bold;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+
+    .info-box p {
+        margin: 5px 0;
+    }
+
+.text-success {
+    color: #28a745;
+}
+
+.text-danger {
+    color: #dc3545;
+}
+
+.text-warning {
+    color: #ffc107;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .image-container img {
+        width: 300px;
+        height: 370px;
+    }

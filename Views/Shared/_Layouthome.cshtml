@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="~/Content/Site.css">
+    <link rel="stylesheet" href="~/Content/layouthome.css">
+    <link rel="stylesheet" href="~/Content/about.css">
+    <link rel="stylesheet" href="~/Content/contact.css">
+    <link rel="stylesheet" href="~/Content/StyleDatVe.css">
+    <link rel="stylesheet" href="~/Content/CaNhan.css">
+    <title>Nhà Xe HUIT</title>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1; /* Chiếm hết không gian trống giữa header và footer */
+        }
+
+        footer {
+            width: 100%;
+            position: relative; /* Hoặc có thể để static nếu không muốn dính chặt vào đáy */
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="bg-gray-100 shadow-md">
+        <nav class="navbar p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="@Url.Action("Index", "Home")" class="font-bold text-2xl text-gray-900">Nhà Xe HUIT</a>
+                </div>
+                <div class="space-x-6">
+                    <a href="@Url.Action("Index", "Home")" class="menu-item">Trang chủ</a>
+                    <a href="@Url.Action("About", "Home")" class="menu-item">Về chúng tôi</a>
+                    <a href="@Url.Action("LichTrinh", "Home")" class="menu-item">Lịch trình</a>
+                    <a href="@Url.Action("Contact", "Home")" class="menu-item">Liên hệ</a>
+                </div>
+                <div class="login-options">
+                    @if (Session["UserRole"] != null)
+                    {
+                        <a href="@Url.Action("Index", "KhachHang")" class="login-button bg-teal-600 text-white px-5 py-2 rounded-lg shadow-md transition duration-300 transform hover:scale-105 hover:bg-teal-700">
+                            Thông tin cá nhân
+                        </a>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("Login", "Auth")" class="login-button bg-teal-600 text-white px-5 py-2 rounded-lg shadow-md transition duration-300 transform hover:scale-105 hover:bg-teal-700">
+                            Đăng nhập
+                        </a>
+                    }
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="bg-white dark:bg-gray-900 mt-10">
+        <div class="mx-auto w-full max-w-screen-xl">
+            <div class="px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
+                <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">© 2024 Nhà Xe HUIT. All Rights Reserved.</span>
+                <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+                    <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                        <i class="fa-brands fa-facebook"></i>
+                        <span class="sr-only">Facebook page</span>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span class="sr-only">Instagram page</span>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                        <i class="fa-brands fa-twitter"></i>
+                        <span class="sr-only">Twitter page</span>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                        <i class="fa-brands fa-youtube"></i>
+                        <span class="sr-only">YouTube channel</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

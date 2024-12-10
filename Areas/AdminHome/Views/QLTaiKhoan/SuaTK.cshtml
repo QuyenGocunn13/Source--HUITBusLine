@@ -1,0 +1,88 @@
+﻿@using QLBVXK.Models
+@model QLBVXK.Models.TAIKHOAN
+
+@{
+    ViewBag.Title = "Sửa Thông Tin Tài Khoản";
+    Layout = "~/Areas/AdminHome/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<div class="content-wrapper">
+    <section class="content">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Thông tin tài khoản</h3>
+            </div>
+            <div class="card-body">
+                <!-- Hiển thị thông báo thành công -->
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success">
+                        <strong>Thành công!</strong> @TempData["SuccessMessage"]
+                    </div>
+                }
+
+                <!-- Hiển thị thông báo lỗi -->
+                @if (TempData["ErrorMessages"] != null)
+                {
+                    <div class="alert alert-danger">
+                        <strong>Lỗi:</strong> @TempData["ErrorMessages"]
+                    </div>
+                }
+
+                @using (Html.BeginForm("SuaTK", "QLTaiKhoan", FormMethod.Post))
+                {
+                    @Html.HiddenFor(m => m.UserID) <!-- Giữ lại ID của tài khoản -->
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.UserID, "User ID")
+                        @Html.TextBoxFor(m => m.UserID, new { @class = "form-control", @readonly = "readonly" })
+                        @Html.ValidationMessageFor(m => m.UserID, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.UserName, "Số điện thoại")
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "Nhập số điện thoại" })
+                        @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Pass, "Mật khẩu")
+                        @Html.PasswordFor(m => m.Pass, new { @class = "form-control", placeholder = "Nhập mật khẩu mới" })
+                        @Html.ValidationMessageFor(m => m.Pass, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.UserRole, "Vai trò")
+                        @Html.DropDownListFor(m => m.UserRole, (IEnumerable<SelectListItem>)ViewBag.UserRoles, "Chọn vai trò", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.UserRole, "", new { @class = "text-danger" })
+                    </div>
+
+                    <!-- Thêm dòng để căn chỉnh các nút sang bên phải -->
+                    <div class="form-group text-right">
+                        <input type="submit" value="Cập nhật" class="btn btn-primary" />
+                        @Html.ActionLink("Trở về", "DSTaiKhoan", "QLTaiKhoan", null, new { @class = "btn btn-secondary ml-2" })
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+    function togglePasswordVisibility() {
+        const passwordInput = document.getElementById("passwordInput");
+        const togglePasswordIcon = document.getElementById("togglePasswordIcon");
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            togglePasswordIcon.classList.remove("fa-eye");
+            togglePasswordIcon.classList.add("fa-eye-slash");
+        } else {
+            passwordInput.type = "password";
+            togglePasswordIcon.classList.remove("fa-eye-slash");
+            togglePasswordIcon.classList.add("fa-eye");
+        }
+    }
+</script>
+

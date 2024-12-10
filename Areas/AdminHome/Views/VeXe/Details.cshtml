@@ -1,0 +1,62 @@
+﻿@using QLBVXK.Models
+@model IEnumerable<CHITIETVEXE>
+
+@{
+    ViewBag.Title = "Chi Tiết Vé";
+    Layout = "~/Areas/AdminHome/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <section class="content">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3 class="card-title">Chi Tiết Vé</h3>
+            </div>
+            <div class="card-body">
+                @if (TempData["Error"] != null)
+                {
+                    <div class="alert alert-danger">
+                        <strong>Lỗi:</strong> @TempData["Error"]
+                    </div>
+                }
+
+                @if (!Model.Any())
+                {
+                    <div class="alert alert-warning">
+                        Không có chi tiết nào cho mã vé được chọn.
+                    </div>
+                }
+                else
+                {
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Mã Vé Xe</th>
+                                <th>Vị Trí Ghế</th>
+                                <th>Điểm Đón</th>
+                                <th>Điểm Trả</th>
+                                <th>Ngày Xuất</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.MaVeXe</td>
+                                    <td>@item.ViTriGhe</td>
+                                    <td>@item.DiemDon</td>
+                                    <td>@item.DiemTra</td>
+                                    <td>@item.NgayXuat.ToString("dd/MM/yyyy")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+
+                <a href="@Url.Action("DSVeXe", "VeXe")" class="btn btn-primary">
+                    <i class="fas fa-arrow-left"></i> Quay lại danh sách vé
+                </a>
+            </div>
+        </div>
+    </section>
+</div>

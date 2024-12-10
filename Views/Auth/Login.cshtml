@@ -1,0 +1,123 @@
+﻿@{
+    ViewData["Title"] = "Đăng Nhập";
+    Layout = "~/Views/Shared/_Layouthome.cshtml";
+}
+
+<div class="login">
+    <form action="@Url.Action("Login", "Auth")" method="POST" class="form-atri">
+        <h1 class="text-2xl font-bold">Đăng Nhập Tài Khoản</h1>
+
+        <!-- Hiển thị thông báo lỗi nếu có -->
+        @if (!string.IsNullOrEmpty(ViewBag.Message as string))
+        {
+            <div class="message">@ViewBag.Message</div>
+        }
+
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" name="UserName" id="username" autocomplete="username"
+                   placeholder="Số điện thoại" required>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="Pass" id="password" autocomplete="current-password"
+                   placeholder="••••••••" required>
+        </div>
+        <button type="submit">Đăng Nhập</button>
+        <div class="register-link mt-4">Bạn chưa có tài khoản? <a href="@Url.Action("Res", "Auth")">Đăng ký ngay</a></div>
+    </form>
+</div>
+
+<style>
+    .login {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #f0f4ff, #c9e8ff);
+    }
+
+    .form-atri {
+        padding: 40px;
+        width: 400px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        text-align: center;
+    }
+
+    h1 {
+        color: #2c3e50;
+        margin-bottom: 20px;
+    }
+
+    label {
+        color: #34495e;
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+
+    .input-group {
+        position: relative;
+        margin-bottom: 1rem;
+    }
+
+        .input-group i {
+            position: absolute; /* Đảm bảo icon nằm ở vị trí chính xác */
+            top: 50%; /* Căn chỉnh icon theo chiều dọc */
+            left: 30px; /* Tạo khoảng cách từ lề trái */
+            transform: translateY(-50%); /* Đưa icon về đúng giữa */
+            color: #bdc3c7; /* Màu sắc nhẹ nhàng */
+            font-size: 1.2rem; /* Đảm bảo kích thước vừa phải */
+            pointer-events: none; /* Để không ảnh hưởng đến tương tác người dùng */
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px 10px 10px 50px;
+            border: 1px solid #bdc3c7;
+            border-radius: 8px;
+            background: #f5f5f5;
+            transition: border-color 0.3s, background-color 0.3s;
+            font-size: 0.95rem;
+        }
+
+            .input-group input:focus {
+                border-color: #3498db;
+                background: #e9f4fc;
+                outline: none;
+            }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+        border-radius: 8px;
+        background-color: #27ae60;
+        color: white;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        button:hover {
+            background-color: #219150;
+        }
+
+    .forgot-password, .register-link {
+        color: #3498db;
+        transition: color 0.3s;
+        font-size: 0.9rem;
+    }
+
+        .forgot-password:hover, .register-link:hover {
+            color: #2980b9;
+        }
+
+    .message {
+        color: #e74c3c;
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+    }
+</style>
